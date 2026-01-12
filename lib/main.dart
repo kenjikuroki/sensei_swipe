@@ -893,44 +893,54 @@ class ResultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("結果発表"),
-        centerTitle: true,
-        automaticallyImplyLeading: false, 
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-      ),
       backgroundColor: const Color(0xFFF9F9F9),
-      body: Column(
-        children: [
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 24),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: const BorderRadius.vertical(bottom: Radius.circular(32)),
-              boxShadow: [
-                BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 10, offset: const Offset(0, 5))
-              ],
-            ),
-            child: Column(
-              children: [
-                const Text(
-                  "正解数",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey),
-                ),
-                Text(
-                  "$score / $total",
-                  style: const TextStyle(
-                    fontSize: 48,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.orange,
+      body: SafeArea( // 1. SafeArea内
+        child: Column(
+          children: [
+            // -----------------------------------------------------------------
+            // 1. 上部エリア
+            // -----------------------------------------------------------------
+            const AdBanner(adKey: 'result'), // 一番上に広告バナー
+
+            Container(
+              width: double.infinity,
+              margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+              padding: const EdgeInsets.symmetric(vertical: 24),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(32), // 角丸32px
+                boxShadow: [
+                  BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 10, offset: const Offset(0, 5))
+                ],
+              ),
+              child: Column(
+                children: [
+                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        "正解数",
+                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey),
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        "$score/$total", // 9/10のようなスコア
+                        style: const TextStyle(
+                          fontSize: 48,
+                          fontWeight: FontWeight.w900, // 太字
+                          color: Colors.orange,
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-                if (!isWeaknessReview && total >= 10)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8.0),
-                    child: Text(
+                  
+                  if (score == total)
+                    const Text(
+                      "PERFECT! 🎉",
+                      style: TextStyle(fontSize: 20, color: Colors.green, fontWeight: FontWeight.bold),
+                    )
+                  else
+                    Text(
                       score >= 8 ? "合格圏内！素晴らしい！" : "あと少し！復習しよう",
                       style: TextStyle(
                         fontSize: 20,
@@ -938,175 +948,171 @@ class ResultPage extends StatelessWidget {
                         color: score >= 8 ? Colors.green : Colors.red,
                       ),
                     ),
-                  )
-                else if (score == total)
-                   const Text(
-                    "PERFECT! 🎉",
-                    style: TextStyle(fontSize: 20, color: Colors.green, fontWeight: FontWeight.bold),
-                  ),
-                
-                if (isWeaknessReview && score > 0)
-                   Padding(
-                     padding: const EdgeInsets.only(top: 8.0),
-                     child: Text(
-                      "$score個の苦手を克服しました！",
-                      style: const TextStyle(fontSize: 16, color: Colors.blueAccent, fontWeight: FontWeight.bold),
-                                       ),
-                   ),
-              ],
+                ],
+              ),
             ),
-          ),
-          
-          const SizedBox(height: 16),
-          
-          Expanded(
-            child: ListView.builder(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              itemCount: history.length,
-              itemBuilder: (context, index) {
-                final item = history[index];
-                final Quiz quiz = item['quiz'];
-                final bool isCorrect = item['result'];
 
-                return Card(
-                  margin: const EdgeInsets.only(bottom: 12),
-                  elevation: 0,
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                    side: BorderSide(color: Colors.grey.withValues(alpha: 0.1)),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Icon(
-                              isCorrect ? Icons.check_circle : Icons.cancel,
-                              color: isCorrect ? Colors.green : Colors.red,
-                              size: 28,
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    quiz.question,
-                                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                                  ),
-                                  if (quiz.imagePath != null)
-                                    Padding(
-                                      padding: const EdgeInsets.only(top: 4.0),
-                                      child: Row(
-                                        children: [
-                                          Icon(Icons.image, size: 16, color: Colors.grey[500]),
-                                          const SizedBox(width: 4),
-                                          Text("画像問題", style: TextStyle(color: Colors.grey[500], fontSize: 12)),
-                                        ],
-                                      ),
-                                    ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 8),
-                        Container(
-                          width: double.infinity,
-                          padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            color: Colors.blueGrey.withValues(alpha: 0.05),
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Text(
-                            "💡 ${quiz.explanation}",
-                            style: TextStyle(color: Colors.blueGrey[700], fontSize: 13),
-                          ),
-                        ),
-                      ],
+            // -----------------------------------------------------------------
+            // 2. 中央エリア（スクロール可能なリスト）
+            // -----------------------------------------------------------------
+            Expanded(
+              child: ListView.builder(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                itemCount: history.length,
+                itemBuilder: (context, index) {
+                  final item = history[index];
+                  final Quiz quiz = item['quiz'];
+                  final bool isCorrect = item['result'];
+
+                  return Card(
+                    margin: const EdgeInsets.only(bottom: 12),
+                    elevation: 0,
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16), // 角丸16px
+                      side: BorderSide(color: Colors.grey.withValues(alpha: 0.1)),
                     ),
-                  ),
-                );
-              },
-            ),
-          ),
-
-          const AdBanner(adKey: 'result'),
-          
-          Container(
-            padding: const EdgeInsets.all(24),
-            child: Column(
-              children: [
-                if (incorrectQuizzes.isNotEmpty)
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 12.0),
-                    child: SizedBox(
-                      width: double.infinity,
-                      height: 56,
-                      child: ElevatedButton.icon(
-                        onPressed: () {
-                          Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(
-                                builder: (context) => QuizPage(
-                                  quizzes: incorrectQuizzes,
-                                  isWeaknessReview: true, 
-                                  totalQuestions: incorrectQuizzes.length,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Icon(
+                                isCorrect ? Icons.check_circle : Icons.cancel,
+                                color: isCorrect ? Colors.green : Colors.red,
+                                size: 28,
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      quiz.question,
+                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                                    ),
+                                    if (quiz.imagePath != null)
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 4.0),
+                                        child: Row(
+                                          children: [
+                                            Icon(Icons.image, size: 16, color: Colors.grey[500]),
+                                            const SizedBox(width: 4),
+                                            Text("画像問題", style: TextStyle(color: Colors.grey[500], fontSize: 12)),
+                                          ],
+                                        ),
+                                      ),
+                                  ],
                                 ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 8),
+                          Container(
+                            width: double.infinity,
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: Colors.blueGrey.withValues(alpha: 0.05), // 薄い青灰色
+                              borderRadius: BorderRadius.circular(8),
                             ),
-                          );
-                        },
-                        icon: const Icon(Icons.refresh),
-                        label: const Text("苦手な問題だけ復習"),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.orange,
-                          foregroundColor: Colors.white,
-                          elevation: 2,
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                          textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                        ),
+                            child: Text(
+                              "💡 ${quiz.explanation}",
+                              style: TextStyle(color: Colors.blueGrey[700], fontSize: 13),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                  ),
-
-                SizedBox(
-                  width: double.infinity,
-                  height: 56,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      if (isWeaknessReview) {
-                        Navigator.of(context).popUntil((route) => route.isFirst);
-                        return;
-                      }
-
-                      final shuffledAgain = List<Quiz>.from(originalQuizzes)..shuffle();
-                       Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(
-                          builder: (context) => QuizPage(
-                            quizzes: shuffledAgain,
-                            categoryKey: categoryKey,
-                            totalQuestions: shuffledAgain.length,
+                  );
+                },
+              ),
+            ),
+            
+            // -----------------------------------------------------------------
+            // 3. 下部エリア（固定フッター）
+            // -----------------------------------------------------------------
+            Container(
+              padding: const EdgeInsets.all(16),
+              color: const Color(0xFFF9F9F9),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      // 左ボタン: 「ミスを確認」 (全問正解時は非表示)
+                      if (incorrectQuizzes.isNotEmpty) ...[
+                        Expanded(
+                          child: SizedBox(
+                            height: 56,
+                            child: ElevatedButton.icon(
+                              onPressed: () {
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (context) => QuizPage(
+                                      quizzes: incorrectQuizzes,
+                                      isWeaknessReview: true,
+                                      totalQuestions: incorrectQuizzes.length,
+                                    ),
+                                  ),
+                                );
+                              },
+                              icon: const Icon(Icons.refresh),
+                              label: const Text("ミスを確認"),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.orange,
+                                foregroundColor: Colors.white,
+                                elevation: 0,
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ),
                           ),
                         ),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      foregroundColor: Colors.blueAccent,
-                      elevation: 0,
-                      side: const BorderSide(color: Colors.blueAccent, width: 2),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                       textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                    ),
-                    child: Text(isWeaknessReview ? "ホームに戻る" : "もう一度やる（シャッフル）"),
+                        const SizedBox(width: 12),
+                      ],
+
+                      // 右ボタン: 「リトライ」 or 「ホームに戻る」
+                      Expanded(
+                        child: SizedBox(
+                          height: 56,
+                          child: ElevatedButton(
+                            onPressed: () {
+                              if (isWeaknessReview) {
+                                Navigator.of(context).popUntil((route) => route.isFirst);
+                                return;
+                              }
+
+                              final shuffledAgain = List<Quiz>.from(originalQuizzes)..shuffle();
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (context) => QuizPage(
+                                    quizzes: shuffledAgain,
+                                    categoryKey: categoryKey,
+                                    totalQuestions: shuffledAgain.length,
+                                  ),
+                                ),
+                              );
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white,
+                              foregroundColor: Colors.blueAccent,
+                              elevation: 0,
+                              side: const BorderSide(color: Colors.blueAccent, width: 2),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
+                            child: Text(isWeaknessReview ? "ホームに戻る" : "リトライ"),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-                
-                if (!isWeaknessReview) ...[
+
                   const SizedBox(height: 12),
+                  
+                  // ホームに戻るリンク
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).popUntil((route) => route.isFirst);
@@ -1114,10 +1120,10 @@ class ResultPage extends StatelessWidget {
                     child: const Text("ホームに戻る", style: TextStyle(color: Colors.grey)),
                   ),
                 ],
-              ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
