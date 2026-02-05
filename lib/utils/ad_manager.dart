@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'purchase_manager.dart';
 
 class PreloadedAd {
   final BannerAd ad;
@@ -25,6 +26,7 @@ class AdManager {
   // final String _testAdUnitId = 'ca-app-pub-3940256099942544/6300978111';
 
   void preloadAd(String key) {
+    if (PurchaseManager.instance.isPremium.value) return;
     if (_ads.containsKey(key)) {
       // Already preloading or loaded
       return;
@@ -77,6 +79,7 @@ class AdManager {
   final String _interstitialAdUnitId = 'ca-app-pub-3331079517737737/3866241086';
 
   void preloadInterstitial() {
+    if (PurchaseManager.instance.isPremium.value) return;
     // If already loaded or loading, skip? 
     // Simplified: just try to load if null.
     if (_interstitialAd != null) return;
@@ -100,6 +103,10 @@ class AdManager {
   /// Shows the interstitial ad if available.
   /// [onComplete] is called when the ad is dismissed or if it fails to show/load.
   void showInterstitial({required VoidCallback onComplete}) {
+    if (PurchaseManager.instance.isPremium.value) {
+       onComplete();
+       return;
+    }
     if (_interstitialAd == null) {
       debugPrint('AdManager: No interstitial ready, skipping.');
       onComplete();

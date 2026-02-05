@@ -1,7 +1,8 @@
-
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../utils/ad_manager.dart';
+import '../utils/purchase_manager.dart';
 import 'banner_ad_placeholder.dart';
 
 class AdBanner extends StatefulWidget {
@@ -23,13 +24,26 @@ class _AdBannerState extends State<AdBanner> {
   BannerAd? _bannerAd;
   bool _isLoaded = false;
   ValueNotifier<bool>? _loadingNotifier; // To track listener for cleanup
+  bool _showPromotion = false;
   
   final String _adUnitId = 'ca-app-pub-3331079517737737/6126923989';
   
   @override
   void initState() {
     super.initState();
-    _initAd();
+    // Check if already premium
+    final isPremium = PurchaseManager.instance.isPremium.value;
+    if (isPremium) {
+      _showPromotion = false;
+      return;
+    }
+
+    // 10% probability to show premium promotion
+    _showPromotion = Random().nextDouble() < 0.1;
+    
+    if (!_showPromotion) {
+      _initAd();
+    }
   }
 
   void _initAd() {
@@ -92,13 +106,58 @@ class _AdBannerState extends State<AdBanner> {
 
   @override
   Widget build(BuildContext context) {
-    if (_isLoaded && _bannerAd != null) {
-      return SizedBox(
-        width: _bannerAd!.size.width.toDouble(),
-        height: _bannerAd!.size.height.toDouble(),
-        child: AdWidget(ad: _bannerAd!),
-      );
-    }
-    return const BannerAdPlaceholder();
+    return ValueListenableBuilder<bool>(
+      valueListenable: PurchaseManager.instance.isPremium,
+      builder: (context, isPremium, child) {
+        if (isPremium) return const SizedBox.shrink();
+
+        if (_showPromotion) {
+          return _buildPromotion();
+        }
+        
+        if (_isLoaded && _bannerAd != null) {
+          return SizedBox(
+            width: _bannerAd!.size.width.toDouble(),
+            height: _bannerAd!.size.height.toDouble(),
+            child: AdWidget(ad: _bannerAd!),
+          );
+        }
+        return const BannerAdPlaceholder();
+      },
+    );
+  }
+
+  Widget _buildPromotion() {
+    return InkWell(
+      onTap: () => PurchaseManager.instance.buyPremium(),
+      child: Container(
+        width: double.infinity,
+        height: 60,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Color(0xFFFFD700), Color(0xFFFF8C00)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
+        child: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.star, color: Colors.white, size: 24),
+            SizedBox(width: 8),
+            Text(
+              "プレミアムプランで広告を完全非表示に！",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(width: 8),
+            Icon(Icons.chevron_right, color: Colors.white, size: 24),
+          ],
+        ),
+      ),
+    );
   }
 }

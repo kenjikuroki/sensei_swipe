@@ -4,10 +4,16 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 
 import 'package:appinio_swiper/appinio_swiper.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'widgets/ad_banner.dart';
 import 'utils/ad_manager.dart';
+import 'utils/purchase_manager.dart';
+import 'widgets/premium_unlock_card.dart';
+import 'widgets/special_offer_dialog.dart';
+import 'utils/prefs_helper.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 Future<void> main() async {
@@ -17,6 +23,9 @@ Future<void> main() async {
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
+
+  // Initialize Purchase Manager
+  await PurchaseManager.instance.initialize();
   
   runApp(const MyApp());
 }
@@ -58,71 +67,7 @@ class Quiz {
   }
 }
 
-class PrefsHelper {
-  static const String _keyWeakQuestions = 'weak_questions';
-  static const String _keyAdCounter = 'ad_counter';
-
-  static Future<bool> shouldShowInterstitial() async {
-    final prefs = await SharedPreferences.getInstance();
-    int current = prefs.getInt(_keyAdCounter) ?? 0;
-    current++;
-    await prefs.setInt(_keyAdCounter, current);
-    return (current % 3 == 0);
-  }
-  
-  static Future<void> saveHighScore(String categoryKey, int score) async {
-    final prefs = await SharedPreferences.getInstance();
-    final currentHigh = prefs.getInt(categoryKey) ?? 0;
-    if (score > currentHigh) {
-      await prefs.setInt(categoryKey, score);
-    }
-  }
-
-  static Future<int> getHighScore(String categoryKey) async {
-    final prefs = await SharedPreferences.getInstance();
-    return prefs.getInt(categoryKey) ?? 0;
-  }
-
-  static Future<void> addWeakQuestions(List<String> questions) async {
-    if (questions.isEmpty) return;
-    final prefs = await SharedPreferences.getInstance();
-    final List<String> current = prefs.getStringList(_keyWeakQuestions) ?? [];
-    
-    bool changed = false;
-    for (final q in questions) {
-      if (!current.contains(q)) {
-        current.add(q);
-        changed = true;
-      }
-    }
-    
-    if (changed) {
-      await prefs.setStringList(_keyWeakQuestions, current);
-    }
-  }
-
-  static Future<void> removeWeakQuestions(List<String> questions) async {
-    if (questions.isEmpty) return;
-    final prefs = await SharedPreferences.getInstance();
-    final List<String> current = prefs.getStringList(_keyWeakQuestions) ?? [];
-    
-    bool changed = false;
-    for (final q in questions) {
-       if (current.remove(q)) {
-         changed = true;
-       }
-    }
-    
-    if (changed) {
-      await prefs.setStringList(_keyWeakQuestions, current);
-    }
-  }
-
-  static Future<List<String>> getWeakQuestions() async {
-    final prefs = await SharedPreferences.getInstance();
-    return prefs.getStringList(_keyWeakQuestions) ?? [];
-  }
-}
+// PrefsHelper moved to lib/utils/prefs_helper.dart
 
 class QuizData {
   static Map<String, List<Quiz>> _data = {};
@@ -171,13 +116,22 @@ class MyApp extends StatelessWidget {
       title: '潜水士 過去問',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF0F172A),
+          primary: const Color(0xFF1E293B),
+        ),
         useMaterial3: true,
-        scaffoldBackgroundColor: Colors.lightBlue[50],
+        scaffoldBackgroundColor: const Color(0xFFF1F5F9),
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.blueAccent,
+          backgroundColor: Color(0xFF1E293B),
           foregroundColor: Colors.white,
           elevation: 0,
+          centerTitle: true,
+          titleTextStyle: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 1.2,
+          ),
         ),
       ),
       home: const HomePage(),
@@ -251,6 +205,7 @@ class _HomePageState extends State<HomePage> {
     }
     
     AdManager.instance.preloadAd('result');
+    AdManager.instance.preloadAd('quiz');
     AdManager.instance.preloadInterstitial();
     
     await Navigator.of(context).push(
@@ -275,6 +230,7 @@ class _HomePageState extends State<HomePage> {
     final weakQuizzes = QuizData.getQuizzesFromTexts(weakTexts);
     
     AdManager.instance.preloadAd('result');
+    AdManager.instance.preloadAd('quiz');
     AdManager.instance.preloadInterstitial();
 
     await navigator.push(
@@ -319,11 +275,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "潜水士 過去問",
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        centerTitle: true,
+        title: const Text("潜水士試験対策"),
       ),
       body: Column(
         children: [
@@ -397,17 +349,25 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   const SizedBox(height: 40),
+
+                  // Sister App Promotion
+                  ValueListenableBuilder<bool>(
+                    valueListenable: PurchaseManager.instance.isPremium,
+                    builder: (context, isPremium, child) {
+                      if (isPremium) return const SizedBox.shrink();
+                      return const Column(
+                        children: [
+                          _SisterAppPromotion(),
+                          SizedBox(height: 40),
+                        ],
+                      );
+                    },
+                  ),
+
+                  const PremiumUnlockCard(),
+                  const SizedBox(height: 20),
                 ],
               ),
-            ),
-          ),
-          
-          // Ad Banner
-          const SafeArea(
-            top: false,
-            child: SizedBox(
-              height: 60,
-              child: AdBanner(adKey: 'home', keepAlive: true),
             ),
           ),
         ],
@@ -434,12 +394,12 @@ class _MenuButton extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
-            blurRadius: 10,
-            offset: const Offset(0, 4),
+            color: const Color(0xFF0F172A).withOpacity(0.06),
+            blurRadius: 20,
+            offset: const Offset(0, 8),
           ),
         ],
       ),
@@ -447,36 +407,32 @@ class _MenuButton extends StatelessWidget {
         color: Colors.transparent,
         child: InkWell(
           onTap: onTap,
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(24),
           child: Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 24.0),
             child: Row(
               children: [
                 Container(
-                  padding: const EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: iconColor.withValues(alpha: 0.1),
-                    shape: BoxShape.circle,
+                    color: iconColor.withOpacity(0.12),
+                    borderRadius: BorderRadius.circular(16),
                   ),
                   child: Icon(icon, color: iconColor, size: 32),
                 ),
-                const SizedBox(width: 16),
+                const SizedBox(width: 20),
                 Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        title,
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87,
-                        ),
-                      ),
-                    ],
+                  child: Text(
+                    title,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF1E293B),
+                      letterSpacing: 0.5,
+                    ),
                   ),
                 ),
-                Icon(Icons.chevron_right, color: Colors.grey[400]),
+                Icon(Icons.chevron_right, color: Colors.blueGrey[300], size: 28),
               ],
             ),
           ),
@@ -485,6 +441,8 @@ class _MenuButton extends StatelessWidget {
     );
   }
 }
+
+
 
 
 // -----------------------------------------------------------------------------
@@ -517,7 +475,7 @@ class _QuizPageState extends State<QuizPage> {
   final List<Quiz> _incorrectQuizzes = [];
   final List<Quiz> _correctQuizzesInReview = [];
   final List<Map<String, dynamic>> _answerHistory = [];
-  Color _backgroundColor = Colors.lightBlue[50]!;
+  Color _backgroundColor = const Color(0xFFF1F5F9);
 
   void _handleSwipeEnd(int previousIndex, int targetIndex, SwiperActivity activity) {
     if (activity is Swipe) {
@@ -549,7 +507,7 @@ class _QuizPageState extends State<QuizPage> {
       Future.delayed(const Duration(milliseconds: 200), () {
         if (mounted) {
           setState(() {
-            _backgroundColor = Colors.lightBlue[50]!;
+            _backgroundColor = const Color(0xFFF1F5F9);
           });
         }
       });
@@ -606,9 +564,22 @@ class _QuizPageState extends State<QuizPage> {
       
       if (shouldShow) {
         AdManager.instance.showInterstitial(
-          onComplete: () {
+          onComplete: () async {
             if (mounted) {
-              _navigateToResult();
+              // After interstitial, check for special offer
+              final showOffer = await PurchaseManager.instance.shouldShowSpecialOffer();
+              if (showOffer && mounted) {
+                await PurchaseManager.instance.markSpecialOfferAsShown();
+                if (!mounted) return;
+                await showDialog(
+                  context: context,
+                  barrierDismissible: false,
+                  builder: (context) => const SpecialOfferDialog(),
+                );
+              }
+              if (mounted) {
+                _navigateToResult();
+              }
             }
           },
         );
@@ -743,6 +714,20 @@ class _QuizPageState extends State<QuizPage> {
                   ],
                 ),
               ),
+              // Ad Banner for Quiz
+              SafeArea(
+                top: false,
+                child: ValueListenableBuilder<bool>(
+                  valueListenable: PurchaseManager.instance.isPremium,
+                  builder: (context, isPremium, child) {
+                    if (isPremium) return const SizedBox.shrink();
+                    return const SizedBox(
+                      height: 60,
+                      child: AdBanner(adKey: 'quiz', keepAlive: true),
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         ),
@@ -791,50 +776,43 @@ class _QuizPageState extends State<QuizPage> {
                   },
                 ),
               ),
-            )
-          else 
-            const Spacer(flex: 2),
+            ),
 
           Expanded(
             flex: 5,
             child: Padding(
               padding: const EdgeInsets.all(24.0),
-              child: LayoutBuilder(
-                builder: (context, constraints) {
-                  return FittedBox(
-                    fit: BoxFit.scaleDown,
-                    child: SizedBox(
-                      width: constraints.maxWidth,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                           if (!hasImage)
-                            const Text(
-                              "Q.",
-                              style: TextStyle(
-                                fontSize: 40,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.blueGrey,
-                              ),
-                            ),
-                          if (!hasImage) const SizedBox(height: 20),
-
-                          Text(
-                            quiz.question,
-                            style: TextStyle(
-                              fontSize: hasImage ? 20 : 24,
-                              fontWeight: FontWeight.bold,
-                              height: 1.3,
-                              color: Colors.black87,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                      ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  const Text(
+                    "Q.",
+                    style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blueGrey,
                     ),
-                  );
-                },
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 20),
+                  Expanded(
+                    child: AutoSizeText(
+                      quiz.question,
+                      style: TextStyle(
+                        fontSize: hasImage ? 24 : 32,
+                        fontWeight: FontWeight.bold,
+                        height: 1.3,
+                        color: Colors.black87,
+                      ),
+                      textAlign: TextAlign.left,
+                      minFontSize: 12,
+                      stepGranularity: 1,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 20,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -861,6 +839,157 @@ class _QuizPageState extends State<QuizPage> {
           ),
           if (hasImage) const SizedBox(height: 10),
         ],
+      ),
+    );
+  }
+
+}
+
+class _SisterAppPromotion extends StatelessWidget {
+  const _SisterAppPromotion();
+
+  Future<void> _launchURL(BuildContext context) async {
+    final Uri url = Uri.parse('https://apps.apple.com/app/id6758617558');
+    
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return Dialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+          child: Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                 Container(
+                  width: 80,
+                  height: 80,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(color: Colors.white, width: 2),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        blurRadius: 10,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                    image: const DecorationImage(
+                      image: AssetImage('assets/sister_app_icon.jpg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                const Text(
+                  "選択問題版のアプリが登場！",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black87,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                const Text(
+                  "App Storeを開いて、\n姉妹アプリのページに移動します。",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 14, color: Colors.grey),
+                ),
+                const SizedBox(height: 24),
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextButton(
+                        onPressed: () => Navigator.of(context).pop(),
+                        child: const Text("キャンセル", style: TextStyle(color: Colors.grey)),
+                      ),
+                    ),
+                    const SizedBox(width: 16),
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () async {
+                          Navigator.of(context).pop();
+                          if (!await launchUrl(url)) {
+                            if (context.mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('URLを開けませんでした')),
+                              );
+                            }
+                          }
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.deepOrange,
+                          foregroundColor: Colors.white,
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                        ),
+                        child: const Text("開く", style: TextStyle(fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 4,
+      shadowColor: Colors.black.withOpacity(0.1),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      child: InkWell(
+        onTap: () => _launchURL(context),
+        borderRadius: BorderRadius.circular(16),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Row(
+            children: [
+               ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.asset(
+                  'assets/sister_app_icon.jpg',
+                  width: 60,
+                  height: 60,
+                  fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) {
+                    return Container(
+                      width: 60,
+                      height: 60,
+                      color: Colors.grey[200],
+                      child: const Icon(Icons.broken_image, color: Colors.grey),
+                    );
+                  },
+                ),
+              ),
+              const SizedBox(width: 16),
+                  const Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "選択問題版のアプリが登場！",
+                          style: TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(height: 4),
+                        Text(
+                          "5択問題で実力試し！\n姉妹アプリはこちら",
+                          style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, height: 1.4),
+                        ),
+                      ],
+                    ),
+                  ),
+              const Icon(Icons.launch, color: Colors.grey),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -893,7 +1022,7 @@ class ResultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF9F9F9),
+      backgroundColor: const Color(0xFFF1F5F9),
       body: SafeArea( // 1. SafeArea内
         child: Column(
           children: [
@@ -1079,17 +1208,17 @@ class ResultPage extends StatelessWidget {
                           height: 56,
                           child: ElevatedButton(
                             onPressed: () {
-                              if (isWeaknessReview) {
+                              if (this.isWeaknessReview) {
                                 Navigator.of(context).popUntil((route) => route.isFirst);
                                 return;
                               }
 
-                              final shuffledAgain = List<Quiz>.from(originalQuizzes)..shuffle();
+                              final shuffledAgain = List<Quiz>.from(this.originalQuizzes)..shuffle();
                               Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
                                   builder: (context) => QuizPage(
                                     quizzes: shuffledAgain,
-                                    categoryKey: categoryKey,
+                                    categoryKey: this.categoryKey,
                                     totalQuestions: shuffledAgain.length,
                                   ),
                                 ),
