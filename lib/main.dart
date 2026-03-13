@@ -12,6 +12,9 @@ import 'utils/ad_manager.dart';
 import 'utils/purchase_manager.dart';
 import 'widgets/premium_unlock_card.dart';
 import 'widgets/special_offer_dialog.dart';
+import 'widgets/premium_upgrade_dialog.dart';
+import 'widgets/mode_toggle.dart';
+import 'widgets/category_review_modal.dart';
 import 'utils/prefs_helper.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -153,6 +156,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _weaknessCount = 0;
   bool _isLoading = true;
+  QuizMode _currentMode = QuizMode.shuffle;
 
   @override
   void initState() {
@@ -201,7 +205,7 @@ class _HomePageState extends State<HomePage> {
         questionsToUse = questionsToUse.take(10).toList();
       }
     } else {
-      questionsToUse.shuffle();
+      // Sequential mode: keep order and use all
     }
     
     AdManager.instance.preloadAd('result');
@@ -222,18 +226,55 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _startWeaknessReview(BuildContext context) async {
-    final navigator = Navigator.of(context);
-    final weakTexts = await PrefsHelper.getWeakQuestions();
-    if (!mounted) return;
-    if (weakTexts.isEmpty) return;
-
-    final weakQuizzes = QuizData.getQuizzesFromTexts(weakTexts);
+    final counts = await _getWeaknessCountsByCategory();
     
+    if (!mounted) return;
+    
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.transparent,
+      builder: (context) => CategoryReviewModal(
+        weaknessCounts: counts,
+        onCategoryTap: (partKey) => _startWeaknessReviewByCategory(context, partKey),
+      ),
+    );
+  }
+
+  Future<Map<String, int>> _getWeaknessCountsByCategory() async {
+    final weakTexts = await PrefsHelper.getWeakQuestions();
+    Map<String, int> counts = {
+      'part1': 0, 'part2': 0, 'part3': 0, 'part4': 0,
+    };
+    
+    for (var text in weakTexts) {
+      if (QuizData.part1.any((q) => q.question == text)) counts['part1'] = (counts['part1'] ?? 0) + 1;
+      else if (QuizData.part2.any((q) => q.question == text)) counts['part2'] = (counts['part2'] ?? 0) + 1;
+      else if (QuizData.part3.any((q) => q.question == text)) counts['part3'] = (counts['part3'] ?? 0) + 1;
+      else if (QuizData.part4.any((q) => q.question == text)) counts['part4'] = (counts['part4'] ?? 0) + 1;
+    }
+    return counts;
+  }
+
+  void _startWeaknessReviewByCategory(BuildContext context, String partKey) async {
+    final weakTexts = await PrefsHelper.getWeakQuestions();
+    List<Quiz> allInCategory;
+    switch(partKey) {
+      case 'part1': allInCategory = QuizData.part1; break;
+      case 'part2': allInCategory = QuizData.part2; break;
+      case 'part3': allInCategory = QuizData.part3; break;
+      case 'part4': allInCategory = QuizData.part4; break;
+      default: allInCategory = [];
+    }
+    
+    final weakQuizzes = allInCategory.where((q) => weakTexts.contains(q.question)).toList();
+    if (weakQuizzes.isEmpty) return;
+
     AdManager.instance.preloadAd('result');
     AdManager.instance.preloadAd('quiz');
     AdManager.instance.preloadInterstitial();
 
-    await navigator.push(
+    if (!mounted) return;
+    await Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => QuizPage(
           quizzes: weakQuizzes,
@@ -264,7 +305,12 @@ class _HomePageState extends State<HomePage> {
        );
        return;
     }
-    _startQuiz(context, quizzes, highScoreKey);
+    _startQuiz(
+      context, 
+      quizzes, 
+      highScoreKey, 
+      isRandom10: _currentMode == QuizMode.shuffle
+    );
   }
 
   @override
@@ -295,7 +341,25 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 24),
+
+                  // Mode Toggle
+                  ValueListenableBuilder<bool>(
+                    valueListenable: PurchaseManager.instance.isPremium,
+                    builder: (context, isPremium, child) {
+                      return ModeToggle(
+                        currentMode: _currentMode,
+                        isPremium: isPremium,
+                        onModeChanged: (mode) {
+                          setState(() {
+                            _currentMode = mode;
+                          });
+                        },
+                      );
+                    },
+                  ),
+                  const SizedBox(height: 24),
+
                   // Part 1: 潜水業務
                   _MenuButton(
                     title: "潜水業務",
@@ -303,7 +367,7 @@ class _HomePageState extends State<HomePage> {
                     iconColor: Colors.blueAccent,
                     onTap: () => _startQuizByCategory(context, 'part1'),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 12),
 
                   // Part 2: 送気、潜降及び浮上
                   _MenuButton(
@@ -312,7 +376,7 @@ class _HomePageState extends State<HomePage> {
                     iconColor: Colors.orange,
                     onTap: () => _startQuizByCategory(context, 'part2'),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 12),
 
                   // Part 3: 高気圧障害
                   _MenuButton(
@@ -321,7 +385,7 @@ class _HomePageState extends State<HomePage> {
                     iconColor: Colors.redAccent,
                     onTap: () => _startQuizByCategory(context, 'part3'),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 12),
 
                   // Part 4: 関係法令
                   _MenuButton(
@@ -341,9 +405,10 @@ class _HomePageState extends State<HomePage> {
                       backgroundColor: Colors.redAccent,
                       foregroundColor: Colors.white,
                       padding: const EdgeInsets.symmetric(vertical: 16),
-                      elevation: 2,
+                      elevation: 4,
+                      shadowColor: Colors.redAccent.withOpacity(0.5),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(16),
                       ),
                       textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
@@ -409,16 +474,16 @@ class _MenuButton extends StatelessWidget {
           onTap: onTap,
           borderRadius: BorderRadius.circular(24),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 24.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
             child: Row(
               children: [
                 Container(
-                  padding: const EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     color: iconColor.withOpacity(0.12),
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  child: Icon(icon, color: iconColor, size: 32),
+                  child: Icon(icon, color: iconColor, size: 26),
                 ),
                 const SizedBox(width: 20),
                 Expanded(
