@@ -2054,7 +2054,7 @@ class _ResultPageState extends State<ResultPage> {
                     )
                   else
                     Text(
-                      widget.score / widget.total >= 0.8 ? "合格圏内！素晴らしい！" : "あと少し！復習しよう",
+                      widget.score / widget.total >= 0.8 ? "合格圏内！素晴らしい！" : widget.score / widget.total >= 0.5 ? "もう少し！頑張ろう！" : "まだまだ復習が必要！",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
