@@ -26,7 +26,7 @@ class _AdBannerState extends State<AdBanner> {
   ValueNotifier<bool>? _loadingNotifier; // To track listener for cleanup
   bool _showPromotion = false;
   
-  final String _adUnitId = 'ca-app-pub-3331079517737737/6126923989';
+  String get _adUnitId => AdManager.instance.adUnitId;
   
   @override
   void initState() {
@@ -128,36 +128,61 @@ class _AdBannerState extends State<AdBanner> {
   }
 
   Widget _buildPromotion() {
-    return InkWell(
-      onTap: () => PurchaseManager.instance.buyPremium(),
-      child: Container(
-        width: double.infinity,
-        height: 60,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xFFFFD700), Color(0xFFFF8C00)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-        ),
-        child: const Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.star, color: Colors.white, size: 24),
-            SizedBox(width: 8),
-            Text(
-              "プレミアムプランで広告を完全非表示に！",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
+    return ValueListenableBuilder<bool>(
+      valueListenable: PurchaseManager.instance.isPurchasing,
+      builder: (context, isPurchasing, child) {
+        return InkWell(
+          onTap: isPurchasing ? null : () async {
+            try {
+              await PurchaseManager.instance.buyPremium();
+            } catch (e) {
+              if (context.mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text('Error: $e')),
+                );
+              }
+            }
+          },
+          child: Container(
+            width: double.infinity,
+            height: 60,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Color(0xFFFFD700), Color(0xFFFF8C00)],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
               ),
             ),
-            SizedBox(width: 8),
-            Icon(Icons.chevron_right, color: Colors.white, size: 24),
-          ],
-        ),
-      ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                if (isPurchasing)
+                  const SizedBox(
+                    width: 20,
+                    height: 20,
+                    child: CircularProgressIndicator(
+                      strokeWidth: 2,
+                      color: Colors.white,
+                    ),
+                  )
+                else
+                  const Icon(Icons.star, color: Colors.white, size: 24),
+                const SizedBox(width: 8),
+                const Text(
+                  "プレミアムプランで広告を完全非表示に！",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(width: 8),
+                if (!isPurchasing) const Icon(Icons.chevron_right, color: Colors.white, size: 24),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 }

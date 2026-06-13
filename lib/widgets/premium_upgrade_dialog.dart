@@ -1,157 +1,223 @@
 import 'package:flutter/material.dart';
+import '../l10n/app_localizations.dart';
 import '../utils/purchase_manager.dart';
+import '../utils/responsive_helper.dart';
 
 class PremiumUpgradeDialog extends StatelessWidget {
   const PremiumUpgradeDialog({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Dialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-      child: Column(
+      clipBehavior: Clip.antiAlias,
+      child: Container(
+        width: ResponsiveHelper.isTablet(context) ? 500 : null,
+        constraints: BoxConstraints(
+          maxHeight: MediaQuery.of(context).size.height * 0.85,
+        ),
+        child: SingleChildScrollView(
+        child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Header with Gold Gradient
+          // Header with Golden Gradient
           Container(
+            padding: EdgeInsets.symmetric(
+              vertical: ResponsiveHelper.respPadding(context, 32),
+            ),
             width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 32),
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [Color(0xFFFFD700), Color(0xFFFFB300)],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
-              borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
             ),
             child: Column(
               children: [
                 Container(
-                  padding: const EdgeInsets.all(12),
+                  padding: EdgeInsets.all(ResponsiveHelper.respPadding(context, 12)),
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.workspace_premium,
-                    size: 40,
-                    color: Color(0xFFFFB300),
+                    color: const Color(0xFFFFB300),
+                    size: ResponsiveHelper.respIconSize(context, 40),
                   ),
                 ),
                 const SizedBox(height: 16),
-                const Text(
-                  "プレミアムアップグレード",
+                Text(
+                  l10n.premiumUpgrade,
                   style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
                     color: Colors.white,
+                    fontSize: ResponsiveHelper.respFontSize(context, 22),
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ],
             ),
           ),
-          
-          // Features List
+          // Benefit List
           Padding(
-            padding: const EdgeInsets.all(24),
+            padding: EdgeInsets.all(ResponsiveHelper.respPadding(context, 24)),
             child: Column(
               children: [
-                _buildFeatureRow(
+                _buildBenefitRow(
+                  context,
                   Icons.format_list_numbered,
-                  "「連続」モードの解放",
-                  "1問目から順番にすべての問題を解くことができます。",
+                  l10n.featureSequentialTitle,
+                  l10n.featureSequentialDesc,
                 ),
-                const SizedBox(height: 16),
-                _buildFeatureRow(
-                  Icons.block,
-                  "広告を完全に非表示",
-                  "アプリ内のあらゆる広告（バナー、動画など）を非表示にします。",
+                const SizedBox(height: 24),
+                _buildBenefitRow(
+                  context,
+                  Icons.bookmark_rounded,
+                  'ブックマーク機能の解放',
+                  '気になった問題をブックマークして、あとでまとめて復習できます。',
+                ),
+                const SizedBox(height: 24),
+                _buildBenefitRow(
+                  context,
+                  Icons.stay_current_portrait,
+                  l10n.featureNoAdsTitle,
+                  l10n.featureNoAdsDesc,
                 ),
               ],
             ),
           ),
-
           // Buttons
           Padding(
-            padding: const EdgeInsets.fromLTRB(24, 0, 24, 24),
+            padding: EdgeInsets.only(
+              left: ResponsiveHelper.respPadding(context, 24),
+              right: ResponsiveHelper.respPadding(context, 24),
+              bottom: ResponsiveHelper.respPadding(context, 24),
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.orange.withOpacity(0.3),
-                        blurRadius: 10,
-                        offset: const Offset(0, 4),
+                ValueListenableBuilder<bool>(
+                  valueListenable: PurchaseManager.instance.isPurchasing,
+                  builder: (context, isPurchasing, child) {
+                    return ElevatedButton(
+                      onPressed: isPurchasing ? null : () async {
+                        try {
+                          await PurchaseManager.instance.buyPremium();
+                          if (context.mounted) Navigator.pop(context);
+                        } catch (e) {
+                          if (context.mounted) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text('Error: $e')),
+                            );
+                          }
+                        }
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFFF39C12),
+                        foregroundColor: Colors.white,
+                        padding: EdgeInsets.symmetric(
+                          vertical: ResponsiveHelper.respPadding(context, 16),
+                        ),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                        elevation: 4,
+                        shadowColor: Colors.black45,
+                      ).copyWith(
+                        elevation: WidgetStateProperty.resolveWith<double>(
+                          (Set<WidgetState> states) {
+                            if (states.contains(WidgetState.pressed)) return 0;
+                            return 4;
+                          },
+                        ),
                       ),
-                    ],
-                  ),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      PurchaseManager.instance.buyPremium();
-                      Navigator.pop(context);
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.orange,
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 16),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      elevation: 0,
-                    ),
-                    child: const Text(
-                      "プレミアムを解放する",
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                  ),
+                      child: isPurchasing
+                          ? const SizedBox(
+                              height: 20,
+                              width: 20,
+                              child: CircularProgressIndicator(
+                                strokeWidth: 2,
+                                color: Colors.white,
+                              ),
+                            )
+                          : Text(
+                              l10n.purchase,
+                              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                            ),
+                    );
+                  },
                 ),
                 const SizedBox(height: 8),
-                TextButton(
-                  onPressed: () => Navigator.pop(context),
-                  child: const Text(
-                    "キャンセル",
-                    style: TextStyle(color: Colors.grey),
-                  ),
+                ValueListenableBuilder<bool>(
+                  valueListenable: PurchaseManager.instance.isPurchasing,
+                  builder: (context, isPurchasing, child) {
+                    return TextButton(
+                      onPressed: isPurchasing
+                          ? null
+                          : () async {
+                              await PurchaseManager.instance.restorePurchases();
+                              if (context.mounted) Navigator.pop(context);
+                            },
+                      child: Text(
+                        l10n.restorePurchase,
+                        style: TextStyle(
+                          color: isPurchasing ? Colors.grey.withValues(alpha: 0.5) : Colors.grey,
+                          fontSize: 13,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+                ValueListenableBuilder<bool>(
+                  valueListenable: PurchaseManager.instance.isPurchasing,
+                  builder: (context, isPurchasing, child) {
+                    return TextButton(
+                      onPressed: isPurchasing ? null : () => Navigator.pop(context),
+                      child: Text(
+                        l10n.cancel,
+                        style: TextStyle(color: isPurchasing ? Colors.grey.withValues(alpha: 0.5) : Colors.grey),
+                      ),
+                    );
+                  },
                 ),
               ],
             ),
           ),
         ],
       ),
-    );
-  }
+      ),
+    ),
+  );
+}
 
-  Widget _buildFeatureRow(IconData icon, String title, String description) {
+  Widget _buildBenefitRow(BuildContext context, IconData icon, String title, String description) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          padding: const EdgeInsets.all(8),
-          decoration: BoxDecoration(
-            color: Colors.orange.withOpacity(0.1),
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Icon(icon, color: Colors.orange, size: 24),
+        Icon(
+          icon,
+          color: const Color(0xFFF39C12),
+          size: ResponsiveHelper.respIconSize(context, 36),
         ),
-        const SizedBox(width: 16),
+        SizedBox(width: ResponsiveHelper.respPadding(context, 20)),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 title,
-                style: const TextStyle(
-                  fontSize: 16,
+                style: TextStyle(
+                  fontSize: ResponsiveHelper.respFontSize(context, 18),
+                  color: const Color(0xFF2C3E50),
                   fontWeight: FontWeight.bold,
                 ),
               ),
               const SizedBox(height: 4),
               Text(
                 description,
-                style: const TextStyle(
-                  fontSize: 14,
+                style: TextStyle(
+                  fontSize: ResponsiveHelper.respFontSize(context, 14),
                   color: Colors.grey,
                   height: 1.4,
                 ),

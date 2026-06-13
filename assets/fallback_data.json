@@ -1,0 +1,3227 @@
+{
+  "config": {
+    "app_id": "sensui",
+    "app_name": "潜水士試験対策",
+    "next_app_text": "",
+    "ios_id": "",
+    "ios_ad_id": "ca-app-pub-3331079517737737~2429036337",
+    "ios_ad_banner": "ca-app-pub-3331079517737737/6126923989",
+    "ios_ad_inter": "ca-app-pub-3331079517737737/3866241086",
+    "ios_premium_id": "unlock_premium",
+    "ios_next_app_url": "",
+    "android_id": "",
+    "andoroid_ad_id": "",
+    "android_ad_banner": "",
+    "android_ad_inter": "",
+    "andoroid_premium_id": "",
+    "android_next_app_url": "",
+    "next_app_enabled": 0,
+    "sale_enabled": 1,
+    "sale_end_date": "2026-12-31",
+    "regular_price": 390,
+    "sale_price": 190,
+    "AppConfigs": "https://docs.google.com/forms/d/e/1FAIpQLSeyl6MTKbXbQCH7Ur-Ua2isMG8tsXSuNsAZc6fn_FFLQJo-hQ/viewform"
+  },
+  "questions": [
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "パニック兆候があるときは、まず急いで浮上するのが基本である。",
+      "is_correct": "×",
+      "explanation": "止まる・呼吸する・考える・行動する順で落ち着くことが重要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "ウエットスーツは、気泡を含んだゴム生地を使用しているため、深度が深くなると水圧で圧縮され、浮力と保温力が低下する。",
+      "is_correct": "〇",
+      "explanation": "正解！深場では生地が薄くなるため、寒くなりやすく、浮力も減ります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "ボートエントリー前には、プロペラ停止を確認することが重要である。",
+      "is_correct": "〇",
+      "explanation": "スクリュー事故防止の基本である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "潜水作業終了後、タンクのバルブを閉める前に、レギュレーター内の残圧を抜く必要がある。",
+      "is_correct": "×",
+      "explanation": "手順が逆です！まずバルブを閉め、その後にパージボタンを押して残圧を抜きます。残圧を抜かないとファーストステージが外れません。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "レギュレーターのファーストステージは、タンク高圧空気をそのまま口元へ送る。",
+      "is_correct": "×",
+      "explanation": "高圧空気を中圧へ減圧して供給する。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "波浪（波）において、水粒子は進行方向に移動し続けている。",
+      "is_correct": "×",
+      "explanation": "不正解！水粒子はその場で円運動をしているだけで、水自体が遠くへ移動しているわけではありません（波形エネルギーが伝わっています）。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "スクーバ潜水では、救命胴衣や浮力調整具の着用は法令上不要である。",
+      "is_correct": "×",
+      "explanation": "携行ボンベによる潜水では救命胴衣又は浮力調整具の着用が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "ジャイアントストライドエントリーは、足元が不安定な岩場や、水面までの距離が近い場所に適している。",
+      "is_correct": "×",
+      "explanation": "不正解！ジャイアントストライドは、水深があり、足場が安定しているボートのデッキや桟橋から「またぐように」飛び込む方法です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "水中コンパスを使用する際、ラバーライン（進行方向線）を体の中心線に合わせ、コンパスを水平に保つ。",
+      "is_correct": "〇",
+      "explanation": "正解！コンパスが傾くと磁針が回転せず、正しい方位を示しません。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "パージボタンは、BCJ内部の水を排出するためだけに使う。",
+      "is_correct": "×",
+      "explanation": "パージボタンは主にセカンドステージ内の水を排出し、空気を送り出すために使う。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "送気式潜水で予備空気槽を携行する場合、送気停止時の非常用として使う。",
+      "is_correct": "〇",
+      "explanation": "送気途絶時のベイルアウトとして用いる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "レギュレーターのダストキャップは、ファーストステージのフィルター部分に水やゴミが入らないようにするためのものである。",
+      "is_correct": "〇",
+      "explanation": "正解！器材を水洗いする際は、必ずダストキャップをしてから洗います。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "低水温環境では、体熱損失を防ぐため末梢血管は拡張する。",
+      "is_correct": "×",
+      "explanation": "寒冷下では体熱損失を抑えるため末梢血管は収縮しやすい。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "タンクバルブの安全板は、水中で浮力調整を行うための装置である。",
+      "is_correct": "×",
+      "explanation": "浮力調整用ではなく安全圧解放用である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "ウエイトは緊急時にすぐ外せないよう、堅固に固定するのが最優先である。",
+      "is_correct": "×",
+      "explanation": "緊急時に直ちに投棄できる装着方法が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "コンパスの近くに磁性体（鉄など）や電流が流れるケーブルがあると、指針が狂う「自差」が生じる。",
+      "is_correct": "〇",
+      "explanation": "正解！水中溶接器や沈船の鉄板などに近づきすぎないよう注意します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "純酸素は深い水深で酸素中毒の危険があるため、通常の深い潜水作業では慎重に扱う。",
+      "is_correct": "〇",
+      "explanation": "高分圧酸素は中枢神経型酸素中毒の危険を高める。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "潜水作業後は器材洗浄や残圧管理などの事後点検も重要である。",
+      "is_correct": "〇",
+      "explanation": "次回の安全使用のために事後管理が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "オクトパスは、自分の主レギュレーター故障時やバディのガス切れ時に使う予備セカンドステージである。",
+      "is_correct": "〇",
+      "explanation": "緊急時の予備呼吸源として使う。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "スクーバ用空気ボンベ（タンク）の最高充填圧力は、一般的に「19.6MPa（約200気圧）」程度である。",
+      "is_correct": "〇",
+      "explanation": "正解！かつては150気圧もありましたが、現在は19.6MPaが主流です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "潜水作業前の器材点検は、事業者に義務付けられていない。",
+      "is_correct": "×",
+      "explanation": "潜水開始前の器材点検を行わせる必要がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "水深10mの絶対圧は約1気圧である。",
+      "is_correct": "×",
+      "explanation": "水深10mでは水圧約1気圧が加わるため絶対圧は約2気圧である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "バディ・システムとは、必ず2人1組で行動し、互いの安全を確認し合う潜水方法のことである。",
+      "is_correct": "〇",
+      "explanation": "正解！単独潜水はトラブル時に致命的になるため、原則禁止です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "バックロールエントリーは、小型ボートのふち（ガンネル）に座り、背中から回転して入水する方法である。",
+      "is_correct": "〇",
+      "explanation": "正解！タンクの重さを利用して後ろに倒れ込みます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "潜水作業中は、潜水作業船に「A旗」を掲げるほか、形状物として「球形・菱形・球形」を垂直に掲げる。",
+      "is_correct": "〇",
+      "explanation": "正解！操縦性能制限船を表す形状物です。夜間は「紅・白・紅」の全周灯を掲げます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "ヘリウム混合ガスを使う主目的は、水中で赤色を見えやすくするためである。",
+      "is_correct": "×",
+      "explanation": "主目的は窒素酔いやガス密度の問題の軽減である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "中性浮力とは、浮きも沈みもしにくい釣り合い状態をいう。",
+      "is_correct": "〇",
+      "explanation": "適切な中性浮力は作業効率と安全性を高める。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "大潮（おおしお）は、新月および満月の頃に起こり、潮差（満潮と干潮の差）が最も大きくなる。",
+      "is_correct": "〇",
+      "explanation": "正解！逆に、上弦・下弦の月の頃は潮差が小さい「小潮」となります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "ウエットスーツは深度が深くなると圧縮され、浮力と保温力が低下しやすい。",
+      "is_correct": "〇",
+      "explanation": "気泡が圧縮されるため浮力・保温力が下がる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "水中にある物体は、光の屈折により、実際の位置よりも「遠く」、かつ「小さく」見える。",
+      "is_correct": "×",
+      "explanation": "不正解！試験の超頻出問題です。屈折率の違い（水約1.33）により、実際よりも「近く（約3/4の距離）」、かつ「大きく（約1.33倍）」見えます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "再圧室（チャンバー）は、減圧症の治療だけでなく、潜水シミュレーションや作業員の選抜試験にも使用されることがある。",
+      "is_correct": "〇",
+      "explanation": "正解！高圧環境への適性を見るためにも使われます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "パニックに陥りそうなときは、「ストップ・ブリーズ・シンク・アクト（止まる・呼吸・考える・行動）」の手順を守る。",
+      "is_correct": "〇",
+      "explanation": "正解！まずは動きを止めて呼吸を整えることが最優先です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "送気式潜水では、潜水作業者に鋭利な刃物を携行させる必要はない。",
+      "is_correct": "×",
+      "explanation": "送気式潜水では鋭利な刃物の携行が求められる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "緊急スイミングアセント（緊急浮上）を行う際は、肺の破裂を防ぐため、息をこらえたまま浮上する。",
+      "is_correct": "×",
+      "explanation": "危険です！浮上すると肺の空気が膨張するため、息をこらえると肺が破裂します。「アー」と声を出すなどして、息を吐き続けながら浮上します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "再圧室は、減圧症が疑われても原則として使用しない方がよい。",
+      "is_correct": "×",
+      "explanation": "減圧症が疑われる場合は重要な治療設備である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "事業者は、潜水作業者に、送気マスク、潜水器、ボンベ等について、潜水開始前に点検を行わせなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！潜水前の器具点検は法令上の義務です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "潜水計画はその場の判断で足り、事前に共有する必要はない。",
+      "is_correct": "×",
+      "explanation": "潜水計画は事前作成・共有が重要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "大潮は新月や満月の頃に起こり、潮差が大きくなりやすい。",
+      "is_correct": "〇",
+      "explanation": "太陽と月の引力が強まり潮差が大きくなる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "ヘルメット式潜水器では、排気弁等の操作によりヘルメット内（潜水服内）の空気量を調整し、浮力をコントロールする。",
+      "is_correct": "〇",
+      "explanation": "正解！排気弁を閉めれば浮力が増し、開ければ浮力が減ります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "潜水作業者と連絡員との間の信号索による合図は、モールス信号式などによる方法が用いられる。",
+      "is_correct": "〇",
+      "explanation": "正解！試験では特定の回数（1回＝停止など）よりも、「モールス信号式等」という表現で出題されることが多いです。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "残圧計の指針が0を指すまで空気を使い切るのが望ましい。",
+      "is_correct": "×",
+      "explanation": "安全のため十分な残圧を残して浮上・帰還する必要がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "信号索は、通話装置がない場合でも不要である。",
+      "is_correct": "×",
+      "explanation": "送気式潜水では信号索が基本装備となる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "潜水作業を開始する前には、送気ホース等について、最高使用圧力等による通気試験（耐圧試験）を行う。",
+      "is_correct": "〇",
+      "explanation": "正解！ホースが圧力に耐えられるか、漏れがないかを事前にチェックします。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "ヘリウム混合ガスを使用する目的は、深い深度における窒素酔いを防ぐためである。",
+      "is_correct": "〇",
+      "explanation": "正解！ヘリウムは窒素より麻酔作用が弱いため、大深度潜水で使われます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "コンパス使用時は、進行方向線を体の中心線に合わせ、なるべく水平に保つ。",
+      "is_correct": "〇",
+      "explanation": "コンパスは傾けすぎると正しく読めない。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "ドライスーツは給気不要で、深くなるほど自動的に快適になる。",
+      "is_correct": "×",
+      "explanation": "ドライスーツはスクイズ防止のため給気が必要になる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "スクーバ潜水において、水面を移動する際は、タンクの空気を節約するためにシュノーケルを使用するのが一般的である。",
+      "is_correct": "〇",
+      "explanation": "正解！顔を上げ続けると疲れるため、シュノーケルを使います。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "タンクのネック部分に打刻されている「V」は、重量（Weight）を表している。",
+      "is_correct": "×",
+      "explanation": "不正解！「V」は内容積（Volume）です。重量は「W」です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "信号索による合図は、潜水作業者と連絡員の連絡手段として用いられる。",
+      "is_correct": "〇",
+      "explanation": "通話装置がない場合等の重要な連絡手段である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "再圧室は、減圧症治療だけでなく、訓練やシミュレーションに用いられることがある。",
+      "is_correct": "〇",
+      "explanation": "治療以外の用途にも使われる場合がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "水中では、可視光線のうち波長の長い「赤色」が最も早く吸収され、深度が増すと黒っぽく見える。",
+      "is_correct": "〇",
+      "explanation": "正解！赤→橙→黄の順に吸収され、青色が最後まで残るため、海中は青く見えます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "全面マスク式（フルフェイス）潜水器は、鼻と口が覆われているため、水中電話（通話機）の使用に適している。",
+      "is_correct": "〇",
+      "explanation": "正解！マウスピースをくわえないため、明瞭な会話が可能です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "潮流は、潮汐（潮の満ち引き）によって生じる海水の水平方向の流れであり、湾口や海峡などで速くなる。",
+      "is_correct": "〇",
+      "explanation": "正解！地形が狭まる場所では流速が増すため、潜水作業時は特に注意が必要です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "送気式潜水において、予備空気槽（ベイルアウトボトル）は、送気が停止した緊急時に使用するために携行する。",
+      "is_correct": "〇",
+      "explanation": "正解！命綱となる重要な装備です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "水中では光の屈折により、物体は実際より遠く小さく見える。",
+      "is_correct": "×",
+      "explanation": "実際には近く大きく見えやすい。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "スクーバ式潜水器の「ファーストステージ」は、タンク内の高圧空気を周囲圧より高い一定の中圧に減圧する。",
+      "is_correct": "〇",
+      "explanation": "正解！タンク圧（高圧）→中圧（ファーストステージ）→周囲圧（セカンドステージ）の順に減圧されます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "BCJ（浮力調整具）のインフレーターは、ボタン操作によりタンクからの空気を給気・排気し、浮力を調整する装置である。",
+      "is_correct": "〇",
+      "explanation": "正解！パワーインフレーターとも呼ばれます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "レギュレーターの「パージボタン」は、マスク内の水を排出するために使用する。",
+      "is_correct": "×",
+      "explanation": "不正解！パージボタンはレギュレーター（セカンドステージ）内部の水を排出したり、空気を強制的に出すためのものです。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "BCJのインフレーターは、浮力調整には関与しない。",
+      "is_correct": "×",
+      "explanation": "給気・排気により浮力調整を行う。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "タンクバルブの安全板は、過圧時の破裂防止のために設けられる。",
+      "is_correct": "〇",
+      "explanation": "異常圧上昇時に圧力解放する安全機構である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "ヘリウム混合ガスの利用目的の一つは、深深度での窒素酔い軽減である。",
+      "is_correct": "〇",
+      "explanation": "窒素分圧を下げるためヘリウムを用いる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "コンプレッサー吸気口は、排ガス混入を避けるため風上の清浄な場所に設ける。",
+      "is_correct": "〇",
+      "explanation": "一酸化炭素等の混入防止が重要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "水中での音速は空気中より遅いため、音源方向を特定しやすい。",
+      "is_correct": "×",
+      "explanation": "水中では音速が速く、左右差がつかみにくいため音源方向を特定しにくい。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "国際信号旗A旗は、潜水作業中を示すものではない。",
+      "is_correct": "×",
+      "explanation": "潜水夫を下ろしていることを示す。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "中性浮力とは、浮きも沈みもしない釣り合った状態のことであり、水中での移動が楽になる。",
+      "is_correct": "〇",
+      "explanation": "正解！サンゴを折ったり、砂を巻き上げたりしないためにも重要なスキルです。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "潜水作業中であっても、A旗や形象物を掲げる必要はない。",
+      "is_correct": "×",
+      "explanation": "潜水作業中は所定の標識を掲げる必要がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "水深10mにおける「絶対圧力」は、約1気圧（0.1MPa）である。",
+      "is_correct": "×",
+      "explanation": "不正解！水深10mの水圧（ゲージ圧）は1気圧ですが、これに大気圧の1気圧を加えた「2気圧」が絶対圧力となります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "緊急浮上時は、気体を肺に閉じ込めるため息を止めるのが安全である。",
+      "is_correct": "×",
+      "explanation": "息止め浮上は危険であり、呼気しながら浮上する。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "ドライスーツは、首や手首のシールにより水の浸入を防ぐため保温性が高いが、水圧によるスクイズを防ぐため給気が必要である。",
+      "is_correct": "〇",
+      "explanation": "正解！深く潜るとスーツ内の空気が圧縮されて体が締め付けられるため、中圧ホースから給気します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "コンプレッサー（空気圧縮機）の吸気口は、エンジンの排気ガスが入らないよう、風上の清潔な場所に設置する。",
+      "is_correct": "〇",
+      "explanation": "正解！一酸化炭素中毒を防ぐための最重要事項です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "マスククリアは、マスク内に水が入った場合、上部を押さえながら鼻から息を吐き、水を下部から排出する技術である。",
+      "is_correct": "〇",
+      "explanation": "正解！基本スキルの一つです。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "タンクネックの表示Vは、一般に重量を示す記号である。",
+      "is_correct": "×",
+      "explanation": "Vは容積を示す表示として使われる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "海水中では赤色系の光が先に吸収されやすい。",
+      "is_correct": "〇",
+      "explanation": "赤色は浅い深度から吸収されやすい。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "ボンベを携行して行う潜水業務では、救命胴衣又は浮力調整具の着用が必要である。",
+      "is_correct": "〇",
+      "explanation": "法令上、着用させる必要がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "ジャイアントストライドエントリーは、足場が不安定な岩場に最も適している。",
+      "is_correct": "×",
+      "explanation": "一般にボート縁からの入水方法であり、岩場には不向きである。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "タンクのバルブには、温度上昇による圧力上昇でタンクが破裂するのを防ぐため、「安全板（バーストディスク）」が設けられている。",
+      "is_correct": "〇",
+      "explanation": "正解！異常な高圧になると、この板が破れて空気を逃がします。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "耳抜き（圧平衡）は、潜降中に耳に痛みを感じてから行うのが最も効果的である。",
+      "is_correct": "×",
+      "explanation": "不正解！痛みを感じてからでは遅く、耳抜きができなくなることがあります。痛みを感じる「前」にこまめに行います。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "国際信号旗「A旗（アルファ旗）」は、青と白の旗であり、「潜水夫を下ろしている、微速で十分避けよ」という意味である。",
+      "is_correct": "〇",
+      "explanation": "正解！左側が白、右側が青の燕尾型の旗です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "水中での切断作業（酸素アーク切断）では、感電防止のため、作業者は必ずゴム手袋を使用し、絶縁状態で作業を行う。",
+      "is_correct": "〇",
+      "explanation": "正解！スイッチの開閉も慎重に行う必要があります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "通話装置により連絡できる場合は、信号索等の一部携行物が不要とされる場合がある。",
+      "is_correct": "〇",
+      "explanation": "通話装置使用時の例外規定がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "純酸素は、水深の深い場所で使用すると酸素中毒を起こす危険性が高いため、通常の潜水では空気が使用される。",
+      "is_correct": "〇",
+      "explanation": "正解！酸素分圧が高くなりすぎるため、純酸素での深い潜水は危険です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "ボートダイビングにおいて、エントリー（入水）する際は、船のプロペラが停止していることを必ず確認する。",
+      "is_correct": "〇",
+      "explanation": "正解！重大事故を防ぐための必須確認事項です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "海水は淡水（真水）よりも密度が高いため、同じ物体であれば海水の方が浮力は大きくなる。",
+      "is_correct": "〇",
+      "explanation": "正解！海水の比重は約1.025〜1.03なので、真水よりよく浮きます。潜水時はウエイトを重くする必要があります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "オクトパス（予備のセカンドステージ）は、自分のレギュレーターが故障した時や、バディの空気がなくなった時に使用する。",
+      "is_correct": "〇",
+      "explanation": "正解！通常、黄色など目立つ色をしており、緊急時に相手に提供しやすい位置に装着します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "波浪では、水粒子が波の進行方向へそのまま移動し続けている。",
+      "is_correct": "×",
+      "explanation": "水粒子は主に円運動や楕円運動を行い、進行方向へ移動し続けるわけではない。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "ウエイト（重り）は、緊急時に直ちに取り外せるよう、クイックリリースバックル等を用いて装着する。",
+      "is_correct": "〇",
+      "explanation": "正解！非常時に捨てて浮上するために、確実かつ迅速に外せる必要があります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "潜水後の器材管理は不要で、塩分や砂が残っていても次回使用に影響しない。",
+      "is_correct": "×",
+      "explanation": "器材保全のため洗浄・管理が重要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "レギュレーターのダストキャップは、内部へ水やごみが入るのを防ぐ。",
+      "is_correct": "〇",
+      "explanation": "ファーストステージの保護に使う。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "定置網などの水中拘束のリスクがある場所では、予備のナイフを携行することが望ましい。",
+      "is_correct": "〇",
+      "explanation": "正解！1本を落としたり、手が届かない場合に備える安全策です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "アルキメデスの原理によれば、水中にある物体には、その物体が押しのけた水の重量に等しい大きさの浮力が働く。",
+      "is_correct": "〇",
+      "explanation": "正解！この浮力が物体に働く重力より大きければ浮き、小さければ沈みます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "バディシステムでは、2人1組で互いの安全を確認し合う。",
+      "is_correct": "〇",
+      "explanation": "単独行動を避ける安全の基本である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "事業者は、潜水業務を行わせるときは、潜水作業者に鋭利な刃物（ナイフ等）を携帯させなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！法令上の義務です。網やロープの切断に使用します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "潜水計画では、深度、時間、使用ガス、緊急時対応などを事前に確認する。",
+      "is_correct": "〇",
+      "explanation": "作業前計画は事故防止の基本である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "水温が低い環境では、体熱の損失を防ぐため末梢血管が拡張し、血行が良くなる。",
+      "is_correct": "×",
+      "explanation": "不正解！寒冷環境では、体熱の放散を防ぐために血管が「収縮」し、手足の血行が悪くなります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "残圧計（SPG）は、タンク内の空気圧力を表示するもので、指針が0になるまで使用してよい。",
+      "is_correct": "×",
+      "explanation": "不正解！0になるとタンク内に水が入ったり、予備空気がなくなったりするため、余裕を持って（通常50気圧程度残して）浮上します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "水中での音速は、空気中の約4.4倍（約1500m/秒）であり、音源の方向を特定しにくくなる。",
+      "is_correct": "〇",
+      "explanation": "正解！音が速すぎて両耳に届く時間差を感じ取れないため、どこから音がしているか分かりにくくなります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "耳抜きは、痛みが強くなってからまとめて行うのが効果的である。",
+      "is_correct": "×",
+      "explanation": "耳抜きは早めに頻回に行う方が安全である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "海水は淡水より密度が低いため、同じ物体なら海水の方が浮力は小さい。",
+      "is_correct": "×",
+      "explanation": "海水は淡水より密度が高く、浮力は大きくなりやすい。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "タンクのネック部刻印には、容積や耐圧試験等に関する情報が含まれる。",
+      "is_correct": "〇",
+      "explanation": "タンク管理上重要な情報が刻印される。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "潜水業務",
+      "question": "マスククリアは、口から息を吐くだけで十分で鼻から息を出す必要はない。",
+      "is_correct": "×",
+      "explanation": "通常は鼻から息を出してマスク内の水を排出する。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "潜降中、スクイズを防ぐためにドライスーツの中に給気すると、浮力が増加してしまう。",
+      "is_correct": "〇",
+      "explanation": "正解！このため、ドライスーツでの潜降はウエットスーツよりも多くのウエイトを必要としたり、排気操作が難しかったりします。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "潜降速度には法令上厳密な毎分値が定められている。",
+      "is_correct": "×",
+      "explanation": "浮上速度と異なり、潜降速度の具体数値規制は一般に置かれていない。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "減圧症の兆候が見られた場合、再度海に入って潜る（ふかし）ことは、有効な治療法として推奨されている。",
+      "is_correct": "×",
+      "explanation": "絶対にダメです！水中で適切な治療（酸素吸入や深度管理）を行うのは不可能で、悪化させる危険が高いです。必ず再圧室へ搬送します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "減圧表に実際の潜水時間がない場合は、より長い時間に切り上げて扱う。",
+      "is_correct": "〇",
+      "explanation": "安全側で計画する必要がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "酸素分圧が高くなっても、酸素中毒の危険は深度と無関係である。",
+      "is_correct": "×",
+      "explanation": "酸素分圧上昇は中枢神経型酸素中毒の危険を高める。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "供給空気中のCO2分圧には上限が定められている。",
+      "is_correct": "〇",
+      "explanation": "二酸化炭素過多は重大な危険となる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "寒冷環境や重労働では、空気消費や減圧症リスクを安全側に見積もる方がよい。",
+      "is_correct": "〇",
+      "explanation": "条件が厳しいほど安全率を取る必要がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "圧縮空気のフィルター類は、使用時間や処理量に応じて交換管理する。",
+      "is_correct": "〇",
+      "explanation": "清浄空気供給のため定期交換が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "高所潜水（海抜300m以上の湖など）では、大気圧が1気圧より低いため、海面と同じ減圧表をそのまま使用すると危険である。",
+      "is_correct": "〇",
+      "explanation": "正解！高所専用の減圧表を使うか、換算を行って厳しく管理する必要があります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "空気を使用する場合、深度増加により酸素分圧も上昇する。",
+      "is_correct": "〇",
+      "explanation": "全圧増加に伴って酸素分圧も増える。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "潜水作業者の浮上速度は、減圧症予防のため、原則として「毎分10メートル以下」が推奨されている。",
+      "is_correct": "〇",
+      "explanation": "正解！古い基準では毎分18mでしたが、現在は毎分10m（または9m）程度ゆっくり浮上するのが安全基準の主流です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "反復潜水（リぺティティブダイブ）とは、前回の潜水終了後、体内に窒素が残留している状態で行う2回目以降の潜水のことをいう。",
+      "is_correct": "〇",
+      "explanation": "正解！残留窒素があるため、1回目よりも減圧不要時間が短くなります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "減圧症予防のためには、浮上速度を遅くするよりも、水底での滞在時間を長くする方が効果的である。",
+      "is_correct": "×",
+      "explanation": "不正解！水底時間が長いほど窒素がたまるので逆効果です。減圧症予防には「水底時間を短く」「浮上速度をゆっくり」が鉄則です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "潜水作業者に供給する空気中の酸素濃度は、通常の空気より高い方が良いため、25%以上に調整することが望ましい。",
+      "is_correct": "×",
+      "explanation": "危険です！酸素濃度が高すぎると「酸素中毒」のリスクが高まるため、通常の空気（約21%）を使用するか、深度に応じて適切に管理された混合ガスを使用します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "残留窒素時間は、体内残留窒素量を潜水時間に換算した概念である。",
+      "is_correct": "〇",
+      "explanation": "反復潜水計画で使う基本概念である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "前回潜水後の残留窒素は、2回目以降の潜水計画に全く影響しない。",
+      "is_correct": "×",
+      "explanation": "反復潜水では残留窒素が大きな要素となる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "反復潜水では、前回潜水で残った窒素を考慮する必要はない。",
+      "is_correct": "×",
+      "explanation": "残留窒素を考慮して計画する必要がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "送気式潜水では、法令上の最低送気量は定められていない。",
+      "is_correct": "×",
+      "explanation": "一定以上の送気量が必要とされる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "水中で呼吸をこらえる（スキップ呼吸）と、二酸化炭素が蓄積し、頭痛や意識喪失の原因となる。",
+      "is_correct": "〇",
+      "explanation": "正解！空気の節約のために呼吸を我慢するのは危険です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "ヘンリーの法則により、一定温度で液体に溶け込む気体の量は、その気体の分圧に比例する。",
+      "is_correct": "〇",
+      "explanation": "正解！深く潜る（圧力が高い）ほど、窒素が体内に多く溶け込む理由はこの法則で説明されます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "送気式潜水において、予備空気槽（ベイルアウトボトル）の容量は、最大深度から水面まで安全に浮上できる量があればよい。",
+      "is_correct": "〇",
+      "explanation": "正解！緊急時の脱出用なので、浮上に必要な最低限の量が確保されている必要があります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "水深が深くなるほど、無減圧潜水可能時間（減圧停止なしで潜れる時間）は短くなる。",
+      "is_correct": "〇",
+      "explanation": "正解！圧力が高いほど窒素の吸収が早いため、限界時間は短くなります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "潜水計画を立てる際、最も深く潜るポイントを潜水時間の「最初」の方に持ってくるのが原則である。",
+      "is_correct": "〇",
+      "explanation": "正解！深いところから浅いところへ移動していく（ディープ・ファースト）ことで、浮上中に徐々に窒素を排出できます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "ボイルの法則では、温度一定のとき気体体積は絶対圧力に比例する。",
+      "is_correct": "×",
+      "explanation": "反比例する。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "潜水計画では、最も深いポイントを潜水後半に回すのが原則である。",
+      "is_correct": "×",
+      "explanation": "通常は最深部を前半に持ってくる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "窒素は脂肪組織に溶け込みやすく、減圧症リスクに関係する。",
+      "is_correct": "〇",
+      "explanation": "脂肪組織への溶解性は高い。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "無限圧潜水時間（NDL）を超えてしまった場合は、浮上中に所定の減圧停止を行わなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！これを「減圧潜水」といいます。NDLを超えない範囲で潜るのが「無減圧潜水」です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "供給空気中の一酸化炭素分圧に上限はなく、多少高くても問題ない。",
+      "is_correct": "×",
+      "explanation": "一酸化炭素分圧には厳しい上限がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "水深20メートル（3気圧）で、毎分20リットル（大気圧換算）の空気を消費するダイバーが40分間潜水する場合、必要な空気量は「2400リットル」である。",
+      "is_correct": "〇",
+      "explanation": "正解！計算式：20(L/分) × 3(気圧) × 40(分) ＝ 2400L。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "残留窒素時間（RNT）とは、体内に残っている窒素量を、その深度における潜水時間に換算したものである。",
+      "is_correct": "〇",
+      "explanation": "正解！2回目の潜水時間は、「実際の潜水時間 ＋ 残留窒素時間」で計算し、減圧表を読みます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "リフティングバッグは、浮上に伴う空気膨張で急上昇する危険がある。",
+      "is_correct": "〇",
+      "explanation": "浮上制御を誤ると危険である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "内容積10リットルのタンクに、19.6MPa（約200気圧）の空気が充填されているとき、利用可能な空気量は約2000リットルである（※残圧等は考慮しない）。",
+      "is_correct": "〇",
+      "explanation": "正解！「容積 × 圧力 ＝ 空気量」の概算式です（10L × 200気圧 ＝ 2000L）。実務ではここから予備分を引いて計画します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "航空機搭乗前待機は、潜水後に特に考慮する必要がない。",
+      "is_correct": "×",
+      "explanation": "潜水後の航空機搭乗には待機時間を設ける必要がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "内容積10L・200気圧のタンク利用可能量は、おおむね200Lである。",
+      "is_correct": "×",
+      "explanation": "単純計算では約2000Lである。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "圧力調整器（レギュレーター）のファーストステージには、タンク残圧が低下した際に空気を遮断する安全装置がついている。",
+      "is_correct": "×",
+      "explanation": "不正解！空気を遮断すると死んでしまいます。残圧が下がると呼吸抵抗が大きくなりますが、空気は最後まで出ます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "減圧停止（デコ・ストップ）は、通常、水面まで浮上する直前の「水深1メートル」で行う。",
+      "is_correct": "×",
+      "explanation": "不正解！減圧停止は通常「3m、6m、9m」といった3m間隔の深度で行います。波の影響を受けにくい深度で行うのが一般的です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "水深40m（5気圧）における酸素の分圧は、空気を使用した場合、約1.05気圧（約0.1MPa）である。",
+      "is_correct": "〇",
+      "explanation": "正解！空気中の酸素は約21%（0.21）なので、5気圧 × 0.21 ＝ 1.05気圧となります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "送気ホースの管理は不要で、ホース絡みは安全に影響しない。",
+      "is_correct": "×",
+      "explanation": "送気ホースは生命線であり、管理が重要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "減圧表における「反復グループ記号（アルファベット）」は、潜水終了時に体内に残っている窒素量のレベルを表している。",
+      "is_correct": "〇",
+      "explanation": "正解！Aから順にZに近づくほど、残留窒素が多いことを示します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "水面休息が短い場合、減圧表上では連続した1回の潜水として扱うことがある。",
+      "is_correct": "〇",
+      "explanation": "短時間の休息では残留窒素が十分抜けないためである。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "充填直後のタンクは温度上昇のため、冷却後に圧力が下がることがある。",
+      "is_correct": "〇",
+      "explanation": "温度変化に伴い圧力は変動する。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "寒冷地や重労働の潜水では、窒素の吸収量が増える可能性があるため、実際の深度よりも深い深度の減圧表を使って安全率をとる。",
+      "is_correct": "〇",
+      "explanation": "正解！「実深度＋4m」や「1ランク深い深度」で計算するなどの補正を行います。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "ドルトンの法則（分圧の法則）によれば、空気（酸素約21%）を使用する場合、4気圧（水深30m）の場所での酸素分圧は「0.84気圧」となる。",
+      "is_correct": "〇",
+      "explanation": "正解！全圧力 × 成分比 ＝ 分圧（4気圧 × 0.21 ＝ 0.84気圧）です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "安全停止は、無減圧潜水では不要であり行わない方がよい。",
+      "is_correct": "×",
+      "explanation": "追加的安全のために行われることがある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "窒素は、脂肪組織には溶けにくく、水（血液）によく溶ける性質がある。",
+      "is_correct": "×",
+      "explanation": "逆です！窒素は「脂溶性」が高く、脂肪組織によく溶け込みます。そのため肥満の人は減圧症リスクが高いとされます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "呼吸用空気に一酸化炭素が少量入っていても、水中では影響しにくい。",
+      "is_correct": "×",
+      "explanation": "一酸化炭素は少量でも重大な危険をもたらす。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "シャルルの法則により、圧力が一定であれば、気体の体積は温度が1℃上昇するごとに、0℃のときの体積の約273分の1ずつ増加する。",
+      "is_correct": "〇",
+      "explanation": "正解！温度が上がると気体の体積は膨張します（例：温められた風船が膨らむ現象）。なお、体積一定で圧力が上がるのは「ゲイ・リュサックの法則」です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "ボイルの法則により、温度が一定であれば、気体の体積は絶対圧力に「比例」する。",
+      "is_correct": "×",
+      "explanation": "不正解！気体の体積は圧力に「反比例」します。圧力が2倍になれば、体積は1/2になります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "送気式潜水において、送気圧は「潜水深度の圧力」と同じであればよい。",
+      "is_correct": "×",
+      "explanation": "不正解！「潜水深度の圧力」に加えて、「ホース内の圧力損失」や「調整器の作動圧」を加えた圧力が必要です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "反復潜水において、前回の潜水からの水面休息時間が「10分未満」の場合は、使用する減圧表の規定により、継続した1回の潜水とみなすことが多い。",
+      "is_correct": "〇",
+      "explanation": "正解！休息時間が短すぎると窒素排出が不十分なため、潜り続けているものとして計算します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "潜水終了後、航空機に搭乗する場合は、減圧症発症のリスクを避けるため、一定時間の待機時間を設ける必要がある。",
+      "is_correct": "〇",
+      "explanation": "正解！上空は気圧が低いため、地上では問題ないレベルの残留窒素でも気泡化する恐れがあります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "高気圧作業安全衛生規則において、潜水作業者に供給する空気中の炭酸ガス（二酸化炭素）の分圧は、「0.5kPa」以下でなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！法令（規則第26条）では濃度(%)ではなく「分圧」で規定されています。0.5kPaは約0.005気圧に相当します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "潜水直後の入浴や激しい運動は、気泡化を促進する「ホットシャワー効果」などを招くため避けるべきである。",
+      "is_correct": "〇",
+      "explanation": "正解！血行が良くなりすぎて急激に窒素が運ばれたり、物理的な衝撃で気泡ができやすくなります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "一酸化炭素混入防止のため、吸気口位置やエンジン排気方向に注意する必要がある。",
+      "is_correct": "〇",
+      "explanation": "排ガス混入は重大な危険である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "窒素は脂肪組織に溶けにくく、減圧症にはほとんど関係しない。",
+      "is_correct": "×",
+      "explanation": "窒素の組織溶解と気泡化は減圧症の本質である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "反復グループ記号は、海面水温だけを表す記号である。",
+      "is_correct": "×",
+      "explanation": "残留窒素レベルを示す記号である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "水深30メートル（4気圧）での空気消費量は、水面（1気圧）での空気消費量の4倍になる。",
+      "is_correct": "〇",
+      "explanation": "正解！深く潜るほど空気の減りが早くなるのは、呼吸する空気の密度が高くなるからです。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "減圧症が疑われる場合は、速やかな酸素投与や再圧治療の検討が重要である。",
+      "is_correct": "〇",
+      "explanation": "初期対応と専門治療が重要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "減圧症兆候があっても、再度潜って症状を抑える方法が推奨される。",
+      "is_correct": "×",
+      "explanation": "いわゆる『ふかし』は推奨されず、適切な医療対応が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "スクーバ潜水において、バディブリージング（一つのレギュレーターを二人で交互に使う）は、現在では推奨されていない。",
+      "is_correct": "〇",
+      "explanation": "正解！技術的に難しくパニックを招きやすいため、現在はオクトパスの使用が標準です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "水深10m（2気圧）では、窒素の「分圧」が水面の2倍になり、生理的な作用も強くなる。",
+      "is_correct": "〇",
+      "explanation": "正解！ガスの生理的作用は、分圧（＝圧力）に比例して強くなります。窒素酔いも分圧上昇によって引き起こされます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "酸素分圧が1.4〜1.6気圧を超えると、酸素中毒（中枢神経型）のリスクが急激に高まる。",
+      "is_correct": "〇",
+      "explanation": "正解！通常の空気潜水でも、水深60mを超えると酸素分圧が1.4気圧を超え始め、危険領域に入ります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "潜降速度については、法令上、具体的な数値による制限（毎分◯メートル以下等）は定められていない。",
+      "is_correct": "〇",
+      "explanation": "正解！浮上速度には制限がありますが、潜降速度には数値規定はありません（耳抜きができる範囲で行います）。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "送気式潜水において、必要な送気量は、その深度の圧力下において毎分「60リットル」以上でなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！大気圧換算（コンプレッサー吸い込み量）ではなく、「その水深で圧縮された状態」で60L必要なので、深いほど大量の空気を送る必要があります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "高気圧作業安全衛生規則において、潜水作業者に供給する空気中の一酸化炭素（CO）の分圧は、「10Pa」以下でなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！法令では「分圧10Pa（パスカル）以下」と規定されています。非常に厳しい基準です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "浮上速度は速すぎると減圧症や肺気圧外傷の危険を高める。",
+      "is_correct": "〇",
+      "explanation": "安全な浮上速度管理が重要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "送気式潜水の送気圧は、その深度圧と同じであれば十分で余裕は不要である。",
+      "is_correct": "×",
+      "explanation": "呼吸抵抗や供給安定性を考えた余裕が必要になる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "スクーバ潜水において、タンクの空気が尽きた場合、緊急スイミングアセント（緊急浮上）を行うときは、決して息を止めてはならない。",
+      "is_correct": "〇",
+      "explanation": "正解！息を止めると肺破裂を起こします。「アー」と声を出しながら息を吐き続けて浮上します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "潜水作業者へ供給する呼吸用空気の品質管理は、減圧症だけでなく中毒防止にも重要である。",
+      "is_correct": "〇",
+      "explanation": "CO、CO2、油分等の管理が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "減圧表に実際の深度がない場合は、より浅い深度の欄を使うのが安全である。",
+      "is_correct": "×",
+      "explanation": "通常はより深い側に切り上げて安全率を取る。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "安全停止は、常に水深1mで行うのが基本である。",
+      "is_correct": "×",
+      "explanation": "一般に3〜6mの範囲で行う。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "潜水後は、脱水予防のため飲水を避けるべきである。",
+      "is_correct": "×",
+      "explanation": "適切な水分補給は脱水予防の観点から重要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "無減圧潜水時間は、一般に深度が深いほど長くなる。",
+      "is_correct": "×",
+      "explanation": "深いほど短くなる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "安全停止（セーフティストップ）は、無減圧潜水の範囲内であっても、安全のために水深3〜6mで3〜5分間停止することである。",
+      "is_correct": "〇",
+      "explanation": "正解！強制ではありませんが、減圧症予防として強く推奨される手順です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "コンプレッサーのオイルには、引火点の低い（燃えやすい）鉱物油を使用するのが適している。",
+      "is_correct": "×",
+      "explanation": "危険です！高温高圧下で発火する危険があるため、引火点の高い専用オイルを使用します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "緊急スイミングアセント時は、息を止めて気道を閉じる方が安全である。",
+      "is_correct": "×",
+      "explanation": "息止め浮上は危険であり、呼気しながら浮上する。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "水深10メートルにおける絶対圧力は、2気圧（約0.2MPa）である。",
+      "is_correct": "〇",
+      "explanation": "正解！水圧（ゲージ圧）の1気圧に、大気圧の1気圧を足すのを忘れないようにしましょう。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "深いポイントを潜水前半に配置するのは、減圧管理上の基本原則の一つである。",
+      "is_correct": "〇",
+      "explanation": "深いところを先に済ませる方が安全側である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "潜水直後の熱い入浴や激しい運動は、気泡化を促進するおそれがある。",
+      "is_correct": "〇",
+      "explanation": "潜水後は身体負荷や急激な温度変化を避ける方が安全である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "反復グループ記号は、前回潜水後に体内へ残った窒素量の目安を示す。",
+      "is_correct": "〇",
+      "explanation": "反復潜水計画で使う残留窒素レベルの指標である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "活性炭フィルターは、水分除去だけを行い、臭気や油分には無関係である。",
+      "is_correct": "×",
+      "explanation": "活性炭は臭気や油分等の除去にも関与する。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "浮上中はウエットスーツやBCJ内の気体膨張で浮力が増しやすい。",
+      "is_correct": "〇",
+      "explanation": "浮上速度管理に影響する重要な要素である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "アルコールを摂取すると、脱水作用により血液が濃縮されるため、減圧症のリスクが高まる。",
+      "is_correct": "〇",
+      "explanation": "正解！潜水前後の飲酒は厳禁です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "フーカー式潜水（水面供給式）は、ホースで空気を送るため、スクーバ潜水に比べて行動範囲が制限される。",
+      "is_correct": "〇",
+      "explanation": "正解！ホースの長さや絡まりに注意が必要です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "同じ呼吸量なら、水深30mでも水面と同じ空気量しか消費しない。",
+      "is_correct": "×",
+      "explanation": "水深30mではおおむね水面の4倍消費する。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "浮上中に水深が浅くなると、ウエットスーツの気泡が膨張し、浮力が増加するため、浮上速度が速くなりすぎないよう注意が必要である。",
+      "is_correct": "〇",
+      "explanation": "正解！水面付近が最も浮力の変化が激しく、急浮上（吹き上げ）の危険があります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "減圧表を使用する際、実際の潜水時間がテーブルにない場合は、それより「長い」時間の数値を使用する。",
+      "is_correct": "〇",
+      "explanation": "正解！深度は「より深く」、時間は「より長く」見積もるのが安全の鉄則です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "コンプレッサー用オイルは、引火点が低いものほど安全である。",
+      "is_correct": "×",
+      "explanation": "不適切なオイルは危険であり、適切な仕様が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "活性炭フィルターは、コンプレッサーで圧縮された空気から、水分と油分、および一酸化炭素を除去するために用いられる。",
+      "is_correct": "×",
+      "explanation": "不正解！活性炭は「油分の蒸気や臭い」を取りますが、「一酸化炭素（CO）」は除去できません。CO除去には触媒が必要です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "フーカー式潜水は、ホース供給式であるため行動範囲が無制限に広がる。",
+      "is_correct": "×",
+      "explanation": "ホース長等により行動範囲は制約される。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "ヘンリーの法則では、液体に溶ける気体量はその気体の分圧に無関係である。",
+      "is_correct": "×",
+      "explanation": "分圧が高いほど溶け込む気体量は増える。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "リフティングバッグ（浮き袋）を使って重量物を引き上げる際、浮上するにつれてバッグ内の空気が膨張し、浮上速度が加速する危険がある。",
+      "is_correct": "〇",
+      "explanation": "正解！制御不能な急浮上（吹き上げ）を防ぐため、排気弁で空気を抜きながら浮上させる必要があります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "ドルトンの法則では、混合気体全圧は各成分ガス分圧と無関係である。",
+      "is_correct": "×",
+      "explanation": "各成分ガス分圧の和で表される。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "予備空気槽は、数呼吸分入っていれば十分である。",
+      "is_correct": "×",
+      "explanation": "安全浮上に必要な量を見込む必要がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "充填直後のタンクは温度が上がっているため、冷却されると圧力が低下する。",
+      "is_correct": "〇",
+      "explanation": "正解！シャルルの法則による現象です。冷えて圧力が下がることを見越して充填します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "高所潜水では、海面と同じ減圧表をそのまま使うと危険な場合がある。",
+      "is_correct": "〇",
+      "explanation": "大気圧が低いため補正が必要になる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "空気清浄装置（フィルター）の交換時期は、使用時間や処理空気量に基づいて管理される。",
+      "is_correct": "〇",
+      "explanation": "正解！限界を超えて使うと、油分や臭いが空気に混入します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "送気式潜水の作業性は高いが、ホース管理や送気設備管理が重要である。",
+      "is_correct": "〇",
+      "explanation": "送気途絶や絡み防止の管理が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "減圧表（ダイブテーブル）を使用する際、実際の潜水深度がテーブルにない場合は、それより「浅い」深度の数値を使用する。",
+      "is_correct": "×",
+      "explanation": "危険です！必ず「深い」ほう（一つ上のランク）の深度の数値を使用し、安全側に計算します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "送気、潜降及び浮上",
+      "question": "予備空気槽は、最大深度から安全に浮上できるだけの容量が必要である。",
+      "is_correct": "〇",
+      "explanation": "緊急離脱を想定した容量設計が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症が疑われる場合、医療者の指示や手順に基づく純酸素の吸入は、応急処置として有効である。",
+      "is_correct": "〇",
+      "explanation": "正解！「酸素ウインドウ」の効果により、窒素の洗い出しが促進されます。ただし根本治療には再圧が必要です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "過度の呼吸抵抗を感じたら、いったん落ち着いて呼吸と状況を整えることが大切である。",
+      "is_correct": "〇",
+      "explanation": "パニック防止に有効である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "肺気圧外傷（肺破裂）は、息を止めたまま急浮上した際などに、肺胞内の空気が膨張して肺組織を損傷する障害である。",
+      "is_correct": "〇",
+      "explanation": "正解！絶対に息を止めてはいけません。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症症状は、浮上後しばらくしてから現れることが多い。",
+      "is_correct": "〇",
+      "explanation": "潜水直後から時間差で発症することがある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症では、中枢神経症状や呼吸症状が現れる重症例もある。",
+      "is_correct": "〇",
+      "explanation": "第2型減圧症では重い神経・呼吸症状が起こり得る。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "潜水後に神経症状や呼吸困難があれば、重症減圧障害を疑う必要がある。",
+      "is_correct": "〇",
+      "explanation": "重症例のサインとして重要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "止血では、出血部位の観察もせず止血帯だけを最初から使うのが基本である。",
+      "is_correct": "×",
+      "explanation": "直接圧迫など基本手順を踏むことが重要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "血液中の二酸化炭素の大部分は、ヘモグロビンと結合して運搬される。",
+      "is_correct": "×",
+      "explanation": "不正解！二酸化炭素の大部分は、血漿（けっしょう）中に「重炭酸イオン」という形で溶け込んで運ばれます（一部はヘモグロビンとも結合しますが）。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "肺胞でのガス交換は、分圧差による拡散とは無関係である。",
+      "is_correct": "×",
+      "explanation": "分圧差に基づく拡散で行われる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "酸素中毒の症状として、筋肉の痙攣（けいれん）、吐き気、めまい、視野狭窄などがある。",
+      "is_correct": "〇",
+      "explanation": "正解！水中での痙攣は溺死に直結するため極めて危険です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症（DCS）は、浮上に伴う減圧により、体内に溶け込んでいた不活性ガス（窒素）が気泡化することで発生する。",
+      "is_correct": "〇",
+      "explanation": "正解！サイダーの栓を抜いた時に泡が出るのと同じ原理です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症の軽症例では、関節痛や皮膚症状がみられることがある。",
+      "is_correct": "〇",
+      "explanation": "いわゆるベンズや皮膚症状などである。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "空間識失調は、内耳障害や冷水刺激などで起こることがある。",
+      "is_correct": "〇",
+      "explanation": "方向感覚を失いやすく危険である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "マスクスクイズ防止には、潜降中にマスク内へ少量の息を送る。",
+      "is_correct": "〇",
+      "explanation": "マスク内圧を周囲圧に近づけるためである。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症の第1型（軽症）には、筋肉や関節の痛み（ベンズ）や、皮膚のかゆみ・発疹などが含まれる。",
+      "is_correct": "〇",
+      "explanation": "正解！関節痛が最も代表的な症状です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "肺の全気量（肺活量＋残気量）は、水深が深くなっても変化しない。",
+      "is_correct": "〇",
+      "explanation": "正解！肺という容器の限界容量（解剖学的な大きさ）は変わりません（※中のガス体積は変わりますが、容器のサイズは不変という意味で正解となります）。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "一酸化炭素中毒にかかった患者の皮膚や粘膜は、チアノーゼ（青紫色）を呈する。",
+      "is_correct": "×",
+      "explanation": "不正解！一酸化炭素ヘモグロビンの色により「鮮紅色（さくら色）」になります。顔色が良く見えるため発見が遅れることがあります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症は、浮上後24時間を過ぎると絶対に発症しない。",
+      "is_correct": "×",
+      "explanation": "多くは早期発症だが、時間差で現れる例もある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "一次救命処置では、周囲の安全確認は不要である。",
+      "is_correct": "×",
+      "explanation": "まず周囲の安全確認が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "気胸（ききょう）は、肺破裂により漏れた空気が胸膜腔（肺と胸壁の間）にたまり、肺がしぼんでしまう状態である。",
+      "is_correct": "〇",
+      "explanation": "正解！胸の痛みや呼吸困難を伴います。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "副鼻腔（サイナス）スクイズは、前頭洞や上顎洞の中の圧力が調整できず、眉間や頬に激痛が走る障害である。",
+      "is_correct": "〇",
+      "explanation": "正解！鼻水に血が混じることもあります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "空間識失調（バーティゴ）は、冷水が耳に入ったり、内耳の気圧障害により、上下左右の感覚を失う状態である。",
+      "is_correct": "〇",
+      "explanation": "正解！パニックになりやすいので、計器を見たり、泡の上がる方向を見て落ち着く必要があります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "スクイズ（締め付け）は、潜降時に体内の閉鎖空間の圧力が、周囲の圧力よりも「高く」なることで生じる。",
+      "is_correct": "×",
+      "explanation": "不正解！周囲の水圧により、体内の空洞の圧力が相対的に「低く（陰圧）」なることで、組織が吸い出されるように腫れたり出血したりする現象です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "酸素欠乏症（酸欠）は、酸素濃度が18%未満の空気を吸入することで発生し、意識喪失などを招く。",
+      "is_correct": "〇",
+      "explanation": "正解！10%以下になると即座に意識を失う危険があります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "一酸化炭素（CO）は、ヘモグロビンとの結合力が酸素の約200〜300倍強く、酸素の運搬を阻害する。",
+      "is_correct": "〇",
+      "explanation": "正解！コンプレッサーの排気ガス混入などで起こります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症の発症時期は、潜水浮上後、約半数が1時間以内に発症する。",
+      "is_correct": "〇",
+      "explanation": "正解！ほとんどが24時間以内に発症しますが、浮上直後の発症ほど重症化しやすい傾向があります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "胸骨圧迫（心臓マッサージ）は、1分間に100〜120回のテンポで行い、胸が約5〜6cm沈む強さ（6cmを超えない）で圧迫する。",
+      "is_correct": "〇",
+      "explanation": "正解！5cm以上深く、しかし6cmは超えないように垂直に押します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "一次救命処置において、傷病者に反応がない場合、まず最初に行うべきは胸骨圧迫である。",
+      "is_correct": "×",
+      "explanation": "不正解！まず「大声で助けを呼ぶ（119番・AED手配）」を行い、その後に「呼吸の確認」を行います。普段通りの呼吸がなければ、直ちに胸骨圧迫を開始します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "胸骨圧迫は、通常1分間100〜120回のテンポで行う。",
+      "is_correct": "〇",
+      "explanation": "ガイドラインの標準的な範囲である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "潜水中に過度の呼吸抵抗を感じた場合、パニックを防ぐため、一旦動作を止めてゆっくりと深い呼吸をする。",
+      "is_correct": "〇",
+      "explanation": "正解！浅く速い呼吸はCO2蓄積を招き危険です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "外耳と中耳の境界にある膜を「鼓膜」といい、中耳は「耳管（ユースタキー管）」によって咽頭（のど）とつながっている。",
+      "is_correct": "〇",
+      "explanation": "正解！この耳管を通気させることで、鼓膜の内外の圧力を調整するのが「耳抜き」です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "息こらえ潜水（素潜り）において、水深が深くなると肺の中の空気は圧縮され、体積が減少する。",
+      "is_correct": "〇",
+      "explanation": "正解！ボイルの法則により、圧力に反比例して肺内の空気体積は小さくなります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "内耳にある「半規管」は、聴覚をつかさどる器官である。",
+      "is_correct": "×",
+      "explanation": "不正解！半規管（三半規管）は「平衡感覚（回転）」をつかさどります。聴覚はカタツムリのような形の「蝸牛（かぎゅう）」です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "反応がなく呼吸が正常でない場合、胸骨圧迫を開始する判断が必要になる。",
+      "is_correct": "〇",
+      "explanation": "一次救命処置の基本である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "一酸化炭素中毒では、ヘモグロビン結合が弱いため通常すぐ自然回復する。",
+      "is_correct": "×",
+      "explanation": "強い結合のため危険で、迅速な酸素投与等が重要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "マスクスクイズを防ぐためには、潜降中に鼻からマスク内に息を吐き出す必要がある。",
+      "is_correct": "〇",
+      "explanation": "正解！マスクブローといいます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "血液中の二酸化炭素の大部分は、遊離気体のまま運ばれる。",
+      "is_correct": "×",
+      "explanation": "多くは重炭酸イオンなどの形で運搬される。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "溺水者の救助後は、腹部圧迫で水を吐かせるのが基本である。",
+      "is_correct": "×",
+      "explanation": "腹部圧迫は推奨されず、呼吸確認と蘇生を優先する。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "潜水障害は、早期認識と適切な初期対応が予後を左右する。",
+      "is_correct": "〇",
+      "explanation": "見逃し防止と迅速対応が重要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "歯牙スクイズは、治療中の歯の空隙などで圧力変化により痛みが出ることがある。",
+      "is_correct": "〇",
+      "explanation": "歯科的空隙が関与することがある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症の治療には、純酸素の吸入のみが有効であり、再圧室の使用は推奨されない。",
+      "is_correct": "×",
+      "explanation": "不正解！減圧症の根本治療は「再圧治療（チャンバー）」です。純酸素吸入は応急処置としては有効ですが、気泡を消滅させるには加圧が必要です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "縦隔気腫（じゅうかくきしゅ）は、漏れた空気が心臓や気管のある「縦隔」にたまるもので、首のあたりを圧迫すると雪を握るような音がすることがある。",
+      "is_correct": "〇",
+      "explanation": "正解！皮下気腫を伴うこともあります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "中枢神経型酸素中毒は、酸素分圧上昇で痙攣などを起こす危険がある。",
+      "is_correct": "〇",
+      "explanation": "高分圧酸素では重篤な症状の危険がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "肺胞（はいほう）で行われるガス交換は、物理的な拡散現象（分圧の高い方から低い方へ移動する）によるものである。",
+      "is_correct": "〇",
+      "explanation": "正解！酸素は肺から血液へ、二酸化炭素は血液から肺へと、分圧差によって移動します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "脱水は減圧症リスクを高める要因の一つである。",
+      "is_correct": "〇",
+      "explanation": "循環や気泡排出に不利に働く。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "出血時の止血では、直接圧迫が基本となる。",
+      "is_correct": "〇",
+      "explanation": "止血帯は限定的状況で検討される。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "二酸化炭素蓄積は、酸素中毒の発現を促進しやすい。",
+      "is_correct": "〇",
+      "explanation": "CO2貯留は痙攣などの危険因子となる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "動脈ガス塞栓症は、肺由来の気泡が血流に入り脳などを塞栓する障害である。",
+      "is_correct": "〇",
+      "explanation": "肺破裂に関連して重篤な神経症状を起こし得る。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "肥満の人は、脂肪組織に窒素が溶け込みやすいため、痩せている人よりも減圧症のリスクが高い。",
+      "is_correct": "〇",
+      "explanation": "正解！窒素は脂肪によく溶けます（脂溶性）。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "二酸化炭素（CO2）中毒の初期症状として、呼吸数が減少し、眠気を催す。",
+      "is_correct": "×",
+      "explanation": "不正解！初期は呼吸中枢が刺激され、呼吸が「激しく（息切れ）」なり、頭痛などを伴います。進行すると意識喪失が起こります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "歯牙スクイズは、治療中の歯の内部にある空洞が、圧力変化により痛む現象である。",
+      "is_correct": "〇",
+      "explanation": "正解！虫歯治療中などの空気が入った歯で起こります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "窒素酔いは、一般に深度が深いほど起こりにくい。",
+      "is_correct": "×",
+      "explanation": "深度が深いほど起こりやすい。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症の痛みがある部位は、加温マッサージを積極的に行うのが推奨される。",
+      "is_correct": "×",
+      "explanation": "不用意な加温・マッサージは推奨されない。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "ウエットスーツの首元がきつすぎると、頸動脈洞反射により徐脈（心拍数低下）や失神を起こすことがある。",
+      "is_correct": "〇",
+      "explanation": "正解！サイズ合わせは重要です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "息こらえ潜水前の過呼吸は、酸素を増やすので常に安全性を高める。",
+      "is_correct": "×",
+      "explanation": "失神リスクを高めるため危険である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "肥満は、脂肪組織への窒素溶解性のため減圧症リスク要因となり得る。",
+      "is_correct": "〇",
+      "explanation": "個人要因として考慮される。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "気胸は、胃に空気がたまって起こる障害である。",
+      "is_correct": "×",
+      "explanation": "胸膜腔へ空気が漏れ、肺が虚脱する障害である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "スクイズは、潜降時に閉鎖空間内圧が周囲圧より高くなって起こる。",
+      "is_correct": "×",
+      "explanation": "低くなって起こる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "チョークス（肺減圧症）は、肺の毛細血管に多数の気泡が詰まることで起こり、咳き込みや呼吸困難を引き起こす。",
+      "is_correct": "〇",
+      "explanation": "正解！窒息（Choke）のような苦しさを伴う危険な状態です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症が疑われても、症状が軽ければ自然治癒を待つのが第一選択である。",
+      "is_correct": "×",
+      "explanation": "軽症でも適切な評価と治療判断が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症の疑いがある場合、医療指示に基づく純酸素投与は有効な応急処置となる。",
+      "is_correct": "〇",
+      "explanation": "体内不活性ガス排出促進などに有効である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "異圧性骨壊死（ずい性骨壊死）は、急性障害であり、潜水直後に激しい骨の痛みを伴う。",
+      "is_correct": "×",
+      "explanation": "不正解！これは「晩発性（慢性）障害」です。長年の潜水業務の結果、数年〜数十年後に大腿骨頭などが壊死する病気で、初期には自覚症状がないことが多いです。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "一酸化炭素はヘモグロビンと強く結合し、酸素運搬を阻害する。",
+      "is_correct": "〇",
+      "explanation": "酸素より強い結合力を持つため危険である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "心臓の左心室から送り出された血液は、大動脈を通って全身に酸素や栄養分を運ぶ。",
+      "is_correct": "〇",
+      "explanation": "正解！左心室→大動脈→全身→静脈→右心房の順で循環します（体循環）。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "二酸化炭素貯留は、呼吸数低下だけを起こし、頭痛や不安感は伴わない。",
+      "is_correct": "×",
+      "explanation": "頭痛、不安感、呼吸困難などを起こし得る。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症にかかった場合、症状が軽ければ、再圧治療を受けずに自然治癒を待ってもよい。",
+      "is_correct": "×",
+      "explanation": "不正解！後遺症が残る可能性があるため、軽症であっても専門医の診断と再圧治療を受けることが原則です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "赤血球に含まれるヘモグロビンは、酸素と結合して酸素ヘモグロビンとなり、全身に酸素を運搬する。",
+      "is_correct": "〇",
+      "explanation": "正解！鮮紅色の動脈血になる理由です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "AEDの使用では、音声指示に従い、通電時は傷病者から離れる必要がある。",
+      "is_correct": "〇",
+      "explanation": "救助者や周囲の安全確保が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "凍傷と低体温症は同じ意味であり、局所障害と全身障害の区別はない。",
+      "is_correct": "×",
+      "explanation": "凍傷は局所障害、低体温症は全身性障害である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "シャローウォーターブラックアウト（浅所失神）は、過呼吸（ハイパーベンチレーション）後の息こらえ潜水で、酸素不足により失神する現象である。",
+      "is_correct": "〇",
+      "explanation": "正解！二酸化炭素濃度が低いため、呼吸苦を感じないまま、酸素切れで突然ブラックアウトします。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "中耳スクイズは、耳管の通気が悪いために起こり、鼓膜の充血や出血、激しい痛みを伴う。",
+      "is_correct": "〇",
+      "explanation": "正解！最も頻繁に起こる潜水障害です。風邪などで耳管が詰まっているとなりやすいです。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "AEDは、心停止傷病者すべてに必ず電気ショックを与える装置である。",
+      "is_correct": "×",
+      "explanation": "解析結果によりショック適応がない場合は通電しない。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "酸素中毒は、酸素分圧が低いほど起こりやすい。",
+      "is_correct": "×",
+      "explanation": "一般に高い酸素分圧で危険性が高まる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "一酸化炭素中毒では、酸素運搬障害により意識障害などを生じることがある。",
+      "is_correct": "〇",
+      "explanation": "組織低酸素を招く。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "過呼吸後の息こらえ潜水は、浅所失神の危険を高める。",
+      "is_correct": "〇",
+      "explanation": "CO2低下で呼吸刺激が遅れ、低酸素失神を招きやすい。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "中耳は耳管を介して咽頭とつながっておらず、圧平衡とは無関係である。",
+      "is_correct": "×",
+      "explanation": "耳管を介して咽頭とつながり圧平衡に関与する。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "半規管は主に聴覚をつかさどる器官である。",
+      "is_correct": "×",
+      "explanation": "半規管は平衡感覚に深く関与する。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "リバースブロックは、浮上時に体内の空気が膨張し、排出されずに内部の圧力が高くなることで痛みが生じる現象である。",
+      "is_correct": "〇",
+      "explanation": "正解！スクイズとは逆の現象です。無理に浮上せず、少し潜降して痛みを和らげてから、ゆっくり浮上します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "外リンパ瘻（ろう）は、強力な耳抜きなどにより内耳の窓が破れ、めまいや難聴が起こる障害である。",
+      "is_correct": "〇",
+      "explanation": "正解！減圧症と区別がつきにくいことがありますが、耳抜き動作との関連が疑われます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "ウエットスーツ首元の過度な締め付けは、頸動脈洞反射を起こすことがある。",
+      "is_correct": "〇",
+      "explanation": "徐脈や失神の原因となり得る。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "カイロなどで患部を温めることは、減圧症の痛み（ベンズ）を緩和する応急処置として推奨される。",
+      "is_correct": "×",
+      "explanation": "不正解！温めると気泡が膨張したり血流で移動したりして悪化する可能性があるため、通常は推奨されません。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "凍傷（とうしょう）は、寒冷により体温が低下し、全身の機能が阻害される状態をいう。",
+      "is_correct": "×",
+      "explanation": "不正解！全身の体温が下がるのは「低体温症（ハイポサーミア）」です。「凍傷」は体の一部（指先など）が凍結して組織が壊死することです。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "動脈ガス塞栓症（アルテリアル・ガス・エンボリズム）は、肺破裂により血管内に入った気泡が、脳などの血管を詰まらせる障害である。",
+      "is_correct": "〇",
+      "explanation": "正解！浮上直後に意識不明になるなど、最も致死率が高い潜水事故の一つです。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症の第2型（重症）には、呼吸困難（チョークス）や、知覚麻痺・運動麻痺などの中枢神経症状が含まれる。",
+      "is_correct": "〇",
+      "explanation": "正解！直ちに再圧治療が必要な緊急事態です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "酸素中毒の中枢神経型（ポール・ベール効果）は、酸素分圧が低い場所で長時間潜水した際に起こる。",
+      "is_correct": "×",
+      "explanation": "不正解！酸素分圧が「高い（1.4〜1.6気圧以上）」場所で起こります。水深の深い場所や、高濃度酸素使用時に注意が必要です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "強い耳抜きで外リンパ瘻が起こると、めまいや難聴を生じることがある。",
+      "is_correct": "〇",
+      "explanation": "内耳の窓部損傷により症状が出る。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "高圧環境下では、声帯の振動数が変化し、声が高く鼻声のようになる「ドナルドダック・ボイス」現象が起こる。",
+      "is_correct": "×",
+      "explanation": "不正解！これは「ヘリウム」を使用した際に起こる現象です。空気潜水（窒素）では起こりません。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "二酸化炭素の蓄積は、酸素中毒の痙攣（けいれん）を誘発しやすくする。",
+      "is_correct": "〇",
+      "explanation": "正解！脳の血流が増加し、酸素が多く供給されすぎるためです。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "AED（自動体外式除細動器）は、心停止しているすべての傷病者に電気ショックを与えることができる。",
+      "is_correct": "×",
+      "explanation": "不正解！AEDがショック必要と判断するのは「心室細動（痙攣）」などの特定のリズムだけです。完全に心静止している場合は「ショックは不要です」とアナウンスされます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "胸骨圧迫では、浅く速く圧迫するほど効果が高い。",
+      "is_correct": "×",
+      "explanation": "適切な深さとテンポが重要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "溺れている人を救助した際、水を吐かせるために腹部を圧迫することは、現在は推奨されていない。",
+      "is_correct": "〇",
+      "explanation": "正解！水を吐かせることより、速やかに人工呼吸や胸骨圧迫を開始することが優先されます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "窒素酔い（Nitrogen Narcosis）は、水深が深くなり窒素分圧が高くなるほど症状が重くなり、判断力の低下や多幸感が生じる。",
+      "is_correct": "〇",
+      "explanation": "正解！「マティーニの法則」とも呼ばれ、深度30mを超えると顕著になります。浮上すれば速やかに回復します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "リバースブロックは潜降時だけに起こり、浮上時には起こらない。",
+      "is_correct": "×",
+      "explanation": "浮上時に膨張気体が抜けずに起こることがある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "耳や副鼻腔に痛みがあっても、我慢して潜降を続ける方がよい。",
+      "is_correct": "×",
+      "explanation": "障害悪化防止のため潜降を止めて対処すべきである。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症のリスク因子である「脱水」は、血液の粘度を高め、気泡の排出を妨げる。",
+      "is_correct": "〇",
+      "explanation": "正解！潜水前後の十分な水分補給が重要です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "息こらえ潜水では、深くなるほど肺内空気体積は圧縮されて減少する。",
+      "is_correct": "〇",
+      "explanation": "ボイルの法則に従い体積は減少する。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "減圧症は、浮上時の減圧とは関係なく起こる。",
+      "is_correct": "×",
+      "explanation": "浮上時の減圧による不活性ガス気泡化で起こる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "息を止めたまま急浮上しても、肺気圧外傷の危険は高まらない。",
+      "is_correct": "×",
+      "explanation": "危険が高まる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "止血法において、出血部位より心臓に近い部分を強く縛る「止血帯法」が第一選択である。",
+      "is_correct": "×",
+      "explanation": "不正解！まずは出血部位を直接圧迫する「直接圧迫止血法」を行います。止血帯法は四肢切断などの大出血で、直接圧迫が困難な場合の最終手段です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "高気圧障害",
+      "question": "水深が深くなっても肺内気体の体積は変化しない。",
+      "is_correct": "×",
+      "explanation": "周囲圧上昇により体積は減少する。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "氏名変更があっても、免許証の書替え手続は不要である。",
+      "is_correct": "×",
+      "explanation": "氏名変更時は書替え手続が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "一定の深度以上で潜水業務を行う場合、再圧室の設置が必要となる。",
+      "is_correct": "〇",
+      "explanation": "規則で再圧室設置義務が定められている。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許証の裏面には、必ず違反歴が記載される。",
+      "is_correct": "×",
+      "explanation": "そのような記載を当然に行う制度ではない。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "事業者は、潜水作業を行う場所において、潜水作業者を収容して輸送できる設備（船など）を備えなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！救助船などの確保義務です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許は5年ごとに更新しなければ失効する。",
+      "is_correct": "×",
+      "explanation": "定期更新制ではない。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許の交付、再交付、書替え等の事務を行うのは、「所轄労働基準監督署長」である。",
+      "is_correct": "×",
+      "explanation": "不正解！免許事務を行うのは「都道府県労働局長」です。労働基準監督署長ではありません。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "高圧ガス保安法において、スクーバ用タンクに空気を充填する作業を行う者は、「充填作業者」の資格が必要な場合がある。",
+      "is_correct": "〇",
+      "explanation": "正解！潜水士免許だけでは充填作業（コンプレッサー操作等）はできません。別の法規制（高圧ガス保安法）が適用されます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水作業場所には、潜水作業者を収容して輸送できる設備を備える必要がある。",
+      "is_correct": "〇",
+      "explanation": "事故時の救護搬送に備える必要がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "事業者は、潜水器、送気管、信号索などについて、潜水作業開始前に点検を行わせなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！毎回の潜水前の義務です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水業務により死亡又は休業を伴う災害が発生した場合、労働者死傷病報告の提出が必要である。",
+      "is_correct": "〇",
+      "explanation": "所轄労働基準監督署長への報告が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士は、飲酒していても本人が自覚症状なければ潜水してよい。",
+      "is_correct": "×",
+      "explanation": "アルコール帯びで潜水業務を行ってはならない。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "単独潜水であっても、連絡手段があれば監視や連絡体制は不要である。",
+      "is_correct": "×",
+      "explanation": "連絡・監視体制の確保は重要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水業務の安全教育は不要で、免許だけあれば足りる。",
+      "is_correct": "×",
+      "explanation": "免許とは別に雇入れ時等の教育が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "免許証を滅失（紛失）したために再交付を受けた後、失ったはずの免許証を発見したときは、10日以内に返納しなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！古い方の免許証は返納義務があります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "高気圧業務健康診断は、1年に1回行えば足りる。",
+      "is_correct": "×",
+      "explanation": "常時従事者には6か月以内ごとに1回必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "再圧室は、設置しても定期点検は不要である。",
+      "is_correct": "×",
+      "explanation": "定期点検義務がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "減圧症にかかった労働者を、治癒後に再び潜水業務に就かせることは、法律で禁止されている。",
+      "is_correct": "×",
+      "explanation": "不正解！一律に禁止はされていません。医師の意見を聞き、適切な健康管理の下であれば復帰可能です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "高気圧業務健康診断で異常所見があれば、医師意見を聴いて就業上の措置を検討する。",
+      "is_correct": "〇",
+      "explanation": "異常所見後の事後措置が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "空気圧縮機は、少なくとも1週間に1回以上点検する。",
+      "is_correct": "〇",
+      "explanation": "定期点検義務がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許は、日本国内の海域でのみ有効であり、公海（国際水域）での作業には適用されない。",
+      "is_correct": "×",
+      "explanation": "不正解！日本の事業者が雇用して行わせる業務であれば、場所が公海であっても労働安全衛生法（潜水士免許義務）が適用されます。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "高気圧業務健康診断は、1年に1回実施すれば足りる。",
+      "is_correct": "×",
+      "explanation": "6か月以内ごとに1回必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "送気ホースの漏れ確認には、純酸素を通気して調べるのが原則である。",
+      "is_correct": "×",
+      "explanation": "純酸素通気を原則とするものではない。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "衛生管理者は、潜水業務を行う事業場でも一切不要である。",
+      "is_correct": "×",
+      "explanation": "一定規模以上の事業場では選任が必要となる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "スクーバ式潜水を行う場合も、必ず連絡員を配置しなければならない。",
+      "is_correct": "×",
+      "explanation": "不正解！スクーバ式の場合は、連絡員の配置義務はありませんが、代わりに「監視人」を配置するか、「潜水作業者を2人1組（バディ）」で組ませる等の措置が必要です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "再圧室を操作する業務に就く者は、「高圧室内作業主任者免許」を持っていなければならない。",
+      "is_correct": "×",
+      "explanation": "不正解！免許は不要ですが、「再圧室操作業務の特別教育」を修了している必要があります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "事業者は、潜水作業について計画を作成し、それに基づき作業させる必要がある。",
+      "is_correct": "〇",
+      "explanation": "作業計画は安全確保の基本である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "送気設備の吸気口位置は、排気ガスの影響を考える必要がない。",
+      "is_correct": "×",
+      "explanation": "吸気汚染防止のため設置場所に注意が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水業務日誌には、潜水の日時、場所、潜水深度、潜水時間、給気量などを記載しなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！誰がどれくらい潜ったかの記録です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許の事務は、所轄労働基準監督署長が行う。",
+      "is_correct": "×",
+      "explanation": "免許権者は都道府県労働局長であり、監督署長ではない。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水作業において、潜水士免許を有する者を「潜水作業主任者」として選任しなければならない。",
+      "is_correct": "×",
+      "explanation": "不正解！実は「潜水作業主任者」という名称の資格や選任義務は法令上に存在しません（高圧室内作業主任者は存在しますが、潜水には不要です）。ただし、実務上リーダーを決めることはあります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "高気圧業務健康診断の結果、異常の所見があると診断された労働者については、医師の意見を聞き、就業制限などの措置を講じなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！医師の意見聴取は事業者の義務です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水業務を行う事業者は、潜水作業者に対し、救命胴衣等の救命具を携帯させなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！緊急浮上や漂流時に備えるためです。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許を取り消された者は、いかなる場合も二度と免許を取得することはできない。",
+      "is_correct": "×",
+      "explanation": "不正解！取消しの日から1年を経過し、情状により適当と認められれば、再試験を受けて取得することが可能です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水業務日誌には、日時、場所、深度、時間などを記載する。",
+      "is_correct": "〇",
+      "explanation": "作業実態把握のため必要事項を記録する。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水業務日誌の保存義務はなく、作業後すぐ廃棄してよい。",
+      "is_correct": "×",
+      "explanation": "潜水業務日誌には保存義務がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許は、都道府県労働局長が与える。",
+      "is_correct": "〇",
+      "explanation": "規則上の免許権者は都道府県労働局長である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "タンク（容器）の再検査期間は、製造後の年数によって異なるが、一般的にスチール製容器は「5年」ごとである。",
+      "is_correct": "〇",
+      "explanation": "正解！アルミ製やコンポジット製など容器の種類によって異なりますが、鋼製（スチール）は5年が基本です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "労働安全衛生法において、潜水士免許試験は「厚生労働大臣」が行うとされているが、実際は「安全衛生技術試験協会」が代行している。",
+      "is_correct": "〇",
+      "explanation": "正解！試験の実施機関は指定試験機関です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "再圧室には、内部と外部が連絡できる装置が必要である。",
+      "is_correct": "〇",
+      "explanation": "通話装置等の設置が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許は、日本国内法令に基づく資格として潜水業務従事に用いられる。",
+      "is_correct": "〇",
+      "explanation": "国内の労働安全衛生関係資格である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "送気設備の吸気口には、有害排気が吸い込まれないよう措置が必要である。",
+      "is_correct": "〇",
+      "explanation": "呼吸用空気汚染防止の基本である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "空気圧縮機や送気設備の点検を行った場合、その記録は「3年間」保存しなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！ここがひっかけポイントです。「人の健康（健診・日誌）」は5年、「機械の点検」は3年保存です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許に取り消しがあっても、将来絶対に再取得できないと一律に定められているわけではない。",
+      "is_correct": "〇",
+      "explanation": "取消し後の扱いは一律永久失格ではない。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "事業者は、潜水業務日誌を作成し、これを「3年間」保存しなければならない。",
+      "is_correct": "×",
+      "explanation": "不正解！潜水業務日誌の保存期間は「5年間」です。機器の点検記録（3年）と混同しないようにしましょう。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "スクーバ式潜水でも、常に法令上必ず連絡員を置かなければならない。",
+      "is_correct": "×",
+      "explanation": "送気式と異なり、一律同様の規定ではない。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "事業者は、潜水業務に使用する空気圧縮機（コンプレッサー）について、少なくとも「1週間に1回以上」点検を行わなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！空気圧縮機は「週1回以上」、空気清浄装置は「月1回以上」の点検が法令（高気圧作業安全衛生規則）で義務付けられています。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "再圧室（チャンバー）を設置しなければならないのは、水深10メートル以上の場所で潜水業務を行う場合である。",
+      "is_correct": "〇",
+      "explanation": "正解！ただし、近隣の再圧室が利用可能で緊急搬送できる体制があれば免除される規定もあります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許証を他人に貸与しても、法令上問題はない。",
+      "is_correct": "×",
+      "explanation": "譲渡・貸与等は取消処分の対象となり得る。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水作業の記録類は、口頭で報告すれば保存しなくてもよい。",
+      "is_correct": "×",
+      "explanation": "文書や記録として保存する必要がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "事業者は、潜水業務に従事する労働者に対し、雇入れ時等の教育（特別教育ではない）を行わなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！潜水業務自体には「特別教育」という名称の講習義務はありませんが、「雇入れ時の安全衛生教育」は全業種共通の義務です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士試験に合格すれば、実務経験がなくても免許の交付を受けることができる。",
+      "is_correct": "〇",
+      "explanation": "正解！潜水士は「ペーパーテストのみ」で取得可能な国家資格であり、実技試験や実務経験要件はありません。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "再圧室には、内部と外部で連絡が取れる通話装置を設けなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！中の患者や付き添い人と会話できないと治療できません。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "送気管（ホース）の点検には、損傷の有無の確認に加え、「純酸素」を通気して漏れがないか確認する試験が含まれる。",
+      "is_correct": "×",
+      "explanation": "不正解！純酸素を通すのは危険です。通常は「空気」で、最高使用圧力等による通気試験を行います。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "健康診断個人票、点検記録、業務日誌などは、それぞれ所定期間保存する必要がある。",
+      "is_correct": "〇",
+      "explanation": "法令ごとに保存義務が設けられている。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "事業者は、高気圧業務健康診断を、雇入れ時および配置換えの際、ならびにその後「1年以内ごとに1回」行わなければならない。",
+      "is_correct": "×",
+      "explanation": "不正解！潜水などの高気圧業務は体に負担がかかるため、「6ヶ月以内ごとに1回」の頻度が義務付けられています。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "事業者は、潜水器、送気管、信号索などを潜水開始前に点検させる必要がある。",
+      "is_correct": "〇",
+      "explanation": "作業開始前点検が義務付けられている。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "満18歳未満でも、潜水士免許の交付を受けることができる。",
+      "is_correct": "×",
+      "explanation": "18歳未満は交付を受けられない。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "高気圧業務健康診断の項目には、「肺活量の測定」が含まれる。",
+      "is_correct": "〇",
+      "explanation": "正解！肺機能のチェックは必須です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "供給空気中の二酸化炭素濃度や一酸化炭素濃度には法令上の上限がある。",
+      "is_correct": "〇",
+      "explanation": "呼吸用空気品質基準が設けられている。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許は、更新制度があり、5年ごとに更新手続きを行わなければならない。",
+      "is_correct": "×",
+      "explanation": "不正解！潜水士免許は「終身免許」であり、更新制度はありません。一度取得すれば一生有効です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "スクーバ用タンク充填作業には、高圧ガス保安法上の資格等が関係する場合がある。",
+      "is_correct": "〇",
+      "explanation": "充填業務には別法令上の規制もある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "再圧室を使用する際は、出入り口の扉が内部の圧力で開かないよう、内開き（または圧力で密着する構造）になっている。",
+      "is_correct": "〇",
+      "explanation": "正解！安全構造になっています。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水業務従事者が常時50人以上の事業場では、衛生管理者選任義務が生じる。",
+      "is_correct": "〇",
+      "explanation": "労働安全衛生法上の一般的選任義務が関係する。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "高気圧業務健康診断個人票は、原則として「5年間」保存しなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！「人の健康」に関わる記録（健診・日誌）は5年保存と覚えましょう。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "タンク再検査周期は、材質や種別にかかわらずすべて同一である。",
+      "is_correct": "×",
+      "explanation": "材質や容器種別で再検査周期が異なる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "再交付後に紛失したはずの免許証を発見した場合、返納義務がある。",
+      "is_correct": "〇",
+      "explanation": "旧免許証の返納が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水作業中、船舶等に掲げる標識（A旗など）を掲げなかった場合、罰則（50万円以下の罰金等）が適用されることがある。",
+      "is_correct": "〇",
+      "explanation": "正解！海上衝突予防法などの違反になります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "氏名を変更したときは、免許証の「書替え」を申請しなければならないが、住所を変更したときは書替えの必要はない。",
+      "is_correct": "〇",
+      "explanation": "正解！本籍や氏名の変更は書替えが必要ですが、現住所の変更だけなら手続き不要です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水作業者に供給する空気中の一酸化炭素（CO）の濃度は、「0.005%（50ppm）以下」でなければならない。",
+      "is_correct": "×",
+      "explanation": "不正解！一酸化炭素は猛毒なので「0.001%（10ppm）以下」という極めて厳しい基準です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水業務に従事する労働者が常時50人以上の事業場では、衛生管理者を選任しなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！業種に関わらず、常時50人以上であれば衛生管理者の選任義務が発生します。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許試験の学科には、潜水業務、送気・潜降・浮上、高気圧障害、関係法令が含まれる。",
+      "is_correct": "〇",
+      "explanation": "4科目構成である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水作業者が溺れたり、減圧症にかかったりする事故を防ぐため、事業者は「潜水計画」を作成し、これを遵守させなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！無計画な潜水は禁止されています。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "事業者は、潜水業務を行うときは、潜水作業者「2人以下」ごとに1人の連絡員を配置しなければならない（送気式の場合）。",
+      "is_correct": "〇",
+      "explanation": "正解！潜水士2名につき1名の連絡員が必要です（2対1ルール）。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "高気圧業務健康診断の項目には、「四肢の運動機能の検査」が含まれる。",
+      "is_correct": "〇",
+      "explanation": "正解！骨壊死や関節痛の影響を見るためです。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許は、通常5年ごとの更新が必要である。",
+      "is_correct": "×",
+      "explanation": "定期更新制ではない。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "事業者は、潜水作業者が使用する送気マスク等の吸気口付近に、有害な排気（内燃機関の排ガス等）が吸引されないよう措置を講じなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！CO中毒防止のための重要規定です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "ボンベ携行潜水では、水中時計、水深計、鋭利な刃物のほか、救命胴衣又は浮力調整具を着用させる必要がある。",
+      "is_correct": "〇",
+      "explanation": "第37条に規定されている。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許試験には実技試験があり、学科試験だけではない。",
+      "is_correct": "×",
+      "explanation": "潜水士免許試験は学科試験で行われる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許証を他人に譲渡したり貸与した場合は、免許の取消処分を受けることがある。",
+      "is_correct": "〇",
+      "explanation": "正解！重大な違反行為として取消対象になります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水業務従事労働者には、雇入れ時等の安全教育を行う必要がある。",
+      "is_correct": "〇",
+      "explanation": "雇入れ時教育等が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "事業者は、再圧室を設置したときは、1ヶ月を超えない期間ごとに1回、定期に点検を行わなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！再圧室や空気清浄装置の点検周期は「月1回」です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許証の裏面には、過去の違反歴や罰則の記録が記載される。",
+      "is_correct": "×",
+      "explanation": "不正解！違反歴を書く欄はありません。住所や条件などが記載される備考欄はあります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水作業者が減圧症にかかった場合、事業者は速やかに再圧室による治療を行わせる等の措置を講じなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！放置してはいけません。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水作業者が減圧症にかかった場合、事業者は再圧治療等の措置を講じる必要がある。",
+      "is_correct": "〇",
+      "explanation": "速やかな再圧治療等が求められる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "減圧症が疑われても、事業者に特段の対応義務はない。",
+      "is_correct": "×",
+      "explanation": "必要な治療措置を講じる責任がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "空気圧縮機や送気設備の点検記録に保存義務はない。",
+      "is_correct": "×",
+      "explanation": "点検記録は所定期間保存する必要がある。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士は、アルコールを帯びて（酒を飲んで）潜水業務を行ってはならない。",
+      "is_correct": "〇",
+      "explanation": "正解！法令で禁止されています。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水士免許試験の受験手数料は、合格した場合にのみ支払う必要がある。",
+      "is_correct": "×",
+      "explanation": "不正解！受験申請時に支払います。不合格でも返還されません。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水作業者が単独で潜水する場合、連絡員との連絡手段があれば、監視人の配置は不要である。",
+      "is_correct": "×",
+      "explanation": "不正解！単独潜水（スクーバ等）の場合は、連絡員ではなくとも「監視人」を配置する等の安全措置が必要です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "高気圧業務健康診断個人票には保存義務がある。",
+      "is_correct": "〇",
+      "explanation": "所定期間の保存が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "高気圧業務健康診断の項目には、「鼓膜及び副鼻腔の検査」が含まれる。",
+      "is_correct": "〇",
+      "explanation": "正解！スクイズの影響を受けやすい部位だからです。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水業務には、潜水士を潜水作業主任者として選任する制度が法定されている。",
+      "is_correct": "×",
+      "explanation": "潜水業務にそのような作業主任者選任制度はない。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水作業者に供給する空気中の二酸化炭素（炭酸ガス）の濃度は、「0.08%（800ppm）以下」でなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！事務所衛生基準（1000ppm）よりも厳しい基準です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "再圧室の扉は、圧力下で不用意に開かない構造であることが必要である。",
+      "is_correct": "〇",
+      "explanation": "安全な加圧維持構造が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "送気式潜水でも、連絡員を置く必要はない。",
+      "is_correct": "×",
+      "explanation": "2人以下ごとに1人の連絡員が必要である。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "事業者は、潜水作業者に、潜水深度および潜水時間に応じた適正な浮上速度を周知させなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！減圧症予防のための基本的義務です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "事業者は、潜水作業者に、水深計、水中時計、鋭利な刃物（ナイフ等）を携帯させなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！スクーバか送気式かを問わず、これらは基本装備として携帯義務があります。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "労働者が潜水業務により死亡または休業したときは、事業者は遅滞なく「労働者死傷病報告」を所轄労働基準監督署長に提出しなければならない。",
+      "is_correct": "〇",
+      "explanation": "正解！事故報告の義務です。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "潜水標識を掲げない場合、関係法令上の罰則対象となることがある。",
+      "is_correct": "〇",
+      "explanation": "海上交通の安全確保のため標識掲示が求められる。",
+      "image_path": "null"
+    },
+    {
+      "app_id": "sensui",
+      "category": "関係法令",
+      "question": "満18歳に満たない者は、潜水士免許試験に合格しても、免許の交付を受けることができない。",
+      "is_correct": "〇",
+      "explanation": "正解！年少者の危険有害業務就労制限により、18歳未満には交付されません。",
+      "image_path": "null"
+    }
+  ]
+}

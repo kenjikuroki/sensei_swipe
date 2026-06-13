@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import '../utils/purchase_manager.dart';
+import '../utils/prefs_helper.dart';
+import '../utils/responsive_helper.dart';
+import '../models/app_data.dart';
+import 'dart:convert';
 
 class SpecialOfferDialog extends StatelessWidget {
   const SpecialOfferDialog({super.key});
@@ -16,8 +20,13 @@ class SpecialOfferDialog extends StatelessWidget {
         children: [
           // Main White Card
           Container(
-            width: double.infinity,
-            padding: const EdgeInsets.fromLTRB(24, 80, 24, 24),
+            width: ResponsiveHelper.isTablet(context) ? 500 : double.infinity,
+            padding: EdgeInsets.fromLTRB(
+              ResponsiveHelper.respPadding(context, 24),
+              ResponsiveHelper.isTablet(context) ? 100 : 80,
+              ResponsiveHelper.respPadding(context, 24),
+              ResponsiveHelper.respPadding(context, 24),
+            ),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(32),
@@ -32,106 +41,169 @@ class SpecialOfferDialog extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text(
+                Text(
                   "期間限定オファー",
                   style: TextStyle(
-                    fontSize: 26,
+                    fontSize: ResponsiveHelper.respFontSize(context, 26),
                     fontWeight: FontWeight.bold,
-                    color: Color(0xFF1E293B),
+                    color: const Color(0xFF1E293B),
                     letterSpacing: -0.5,
                   ),
                 ),
                 const SizedBox(height: 12),
-                const Text(
-                  "2月末まで特別価格！",
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Color(0xFF64748B),
-                    fontWeight: FontWeight.w600,
-                  ),
+                FutureBuilder<String?>(
+                  future: PrefsHelper.getAppDataCache(),
+                  builder: (context, snapshot) {
+                    String dateText = "期間限定特別価格！";
+                    if (snapshot.hasData && snapshot.data != null) {
+                      try {
+                        final data = AppData.fromJson(json.decode(snapshot.data!));
+                        if (data.config.saleEndDate != null) {
+                          final date = data.config.saleEndDate!;
+                          dateText = "${date.month}月${date.day}日まで特別価格！";
+                        }
+                      } catch (_) {}
+                    }
+                    return Text(
+                      dateText,
+                      style: TextStyle(
+                        fontSize: ResponsiveHelper.respFontSize(context, 16),
+                        color: const Color(0xFF64748B),
+                        fontWeight: FontWeight.w600,
+                      ),
+                    );
+                  },
                 ),
                 const SizedBox(height: 32),
-                // Price Section
-                Container(
-                  padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 20),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFFFF9E5),
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: const Color(0xFFFFE082), width: 1),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "¥390",
-                        style: TextStyle(
-                          fontSize: 22,
-                          color: const Color(0xFF94A3B8),
-                          decoration: TextDecoration.lineThrough,
-                          fontWeight: FontWeight.w500,
+                FutureBuilder<String?>(
+                  future: PrefsHelper.getAppDataCache(),
+                  builder: (context, snapshot) {
+                    int regularPrice = 390;
+                    int salePrice = 190;
+                    if (snapshot.hasData && snapshot.data != null) {
+                      try {
+                        final data = AppData.fromJson(json.decode(snapshot.data!));
+                        regularPrice = data.config.regularPrice;
+                        salePrice = data.config.salePrice;
+                      } catch (_) {}
+                    }
+
+                    return Column(
+                      children: [
+                        // Price Section
+                        Container(
+                          padding: EdgeInsets.symmetric(
+                            vertical: ResponsiveHelper.respPadding(context, 24),
+                            horizontal: ResponsiveHelper.respPadding(context, 20),
+                          ),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFFFF9E5),
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(color: const Color(0xFFFFE082), width: 1),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "¥$regularPrice",
+                                style: TextStyle(
+                                  fontSize: ResponsiveHelper.respFontSize(context, 22),
+                                  color: const Color(0xFF94A3B8),
+                                  decoration: TextDecoration.lineThrough,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              SizedBox(width: ResponsiveHelper.respPadding(context, 16)),
+                              Icon(
+                                Icons.chevron_right,
+                                color: const Color(0xFFFFB300),
+                                size: ResponsiveHelper.respIconSize(context, 24),
+                              ),
+                              SizedBox(width: ResponsiveHelper.respPadding(context, 16)),
+                              Text(
+                                "¥$salePrice",
+                                style: TextStyle(
+                                  fontSize: ResponsiveHelper.respFontSize(context, 42),
+                                  fontWeight: FontWeight.w900,
+                                  color: const Color(0xFF0F172A),
+                                  letterSpacing: -1,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                      const SizedBox(width: 16),
-                      const Icon(Icons.chevron_right, color: Color(0xFFFFB300), size: 24),
-                      const SizedBox(width: 16),
-                      const Text(
-                        "¥190",
-                        style: TextStyle(
-                          fontSize: 42,
-                          fontWeight: FontWeight.w900,
-                          color: Color(0xFF0F172A),
-                          letterSpacing: -1,
+                        const SizedBox(height: 40),
+                        ValueListenableBuilder<bool>(
+                          valueListenable: PurchaseManager.instance.isPurchasing,
+                          builder: (context, isPurchasing, child) {
+                            return Container(
+                              width: double.infinity,
+                              height: ResponsiveHelper.respSize(context, 64),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(32),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: isPurchasing ? Colors.grey.withOpacity(0.1) : Colors.orange.withOpacity(0.3),
+                                    blurRadius: 12,
+                                    offset: const Offset(0, 6),
+                                  ),
+                                ],
+                              ),
+                              child: ElevatedButton(
+                                onPressed: isPurchasing ? null : () async {
+                                  try {
+                                    await PurchaseManager.instance.buyPremium();
+                                    if (context.mounted) Navigator.pop(context);
+                                  } catch (e) {
+                                    if (context.mounted) {
+                                      ScaffoldMessenger.of(context).showSnackBar(
+                                        SnackBar(content: Text('Error: $e')),
+                                      );
+                                    }
+                                  }
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color(0xFFFF9800),
+                                  foregroundColor: Colors.white,
+                                  elevation: 0,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(32),
+                                  ),
+                                  disabledBackgroundColor: Colors.orange.withOpacity(0.5),
+                                ),
+                                child: isPurchasing
+                                    ? const SizedBox(
+                                        height: 24,
+                                        width: 24,
+                                        child: CircularProgressIndicator(
+                                          strokeWidth: 2,
+                                          color: Colors.white,
+                                        ),
+                                      )
+                                    : Text(
+                                        "今すぐ¥$salePriceで購入",
+                                        style: TextStyle(
+                                          fontSize: ResponsiveHelper.respFontSize(context, 20),
+                                          fontWeight: FontWeight.w800,
+                                        ),
+                                      ),
+                              ),
+                            );
+                          },
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 40),
-                // Main Button
-                Container(
-                  width: double.infinity,
-                  height: 64,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(32),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.orange.withOpacity(0.3),
-                        blurRadius: 12,
-                        offset: const Offset(0, 6),
-                      ),
-                    ],
-                  ),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                      PurchaseManager.instance.buyPremium();
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFFFF9800),
-                      foregroundColor: Colors.white,
-                      elevation: 0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(32),
-                      ),
-                    ),
-                    child: const Text(
-                      "今すぐ¥190で購入",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w800,
-                      ),
-                    ),
-                  ),
+                      ],
+                    );
+                  },
                 ),
                 const SizedBox(height: 16),
                 // Secondary Button
                 TextButton(
                   onPressed: () => Navigator.pop(context),
-                  child: const Text(
+                  child: Text(
                     "いいえ、結構です",
                     style: TextStyle(
-                      color: Color(0xFF94A3B8),
-                      fontSize: 15,
+                      color: const Color(0xFF94A3B8),
+                      fontSize: ResponsiveHelper.respFontSize(context, 15),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -141,9 +213,9 @@ class SpecialOfferDialog extends StatelessWidget {
           ),
           // Floating Icon
           Positioned(
-            top: -45,
+            top: ResponsiveHelper.isTablet(context) ? -55 : -45,
             child: Container(
-              padding: const EdgeInsets.all(22),
+              padding: EdgeInsets.all(ResponsiveHelper.respPadding(context, 22)),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: const LinearGradient(
@@ -159,10 +231,10 @@ class SpecialOfferDialog extends StatelessWidget {
                   ),
                 ],
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.local_offer,
                 color: Colors.white,
-                size: 44,
+                size: ResponsiveHelper.respIconSize(context, 44),
               ),
             ),
           ),

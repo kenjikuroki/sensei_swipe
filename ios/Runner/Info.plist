@@ -49,5 +49,7 @@
 	<string>ca-app-pub-3331079517737737~2429036337</string>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>適切に広告を表示するために、次の画面で「許可」を選択してください。</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 </dict>
 </plist>
